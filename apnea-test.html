@@ -26,8 +26,9 @@
             <li><a href="/#features">Features</a></li>
             <li><a href="/#who-snores">Who Snores?</a></li>
             <li><a href="/#quiz">Do I Snore?</a></li>
-            <li><a href="/#pricing">Pricing</a></li>
+            <li><a href="apnea-test.html">Sleep Apnea</a></li>
             <li><a href="blog/">Blog</a></li>
+            <li class="nav-lang"><a href="/" title="English"><strong>EN</strong></a> | <a href="/fr/" title="Français">FR</a> | <a href="/es/" title="Español">ES</a> | <a href="/de/" title="Deutsch">DE</a> | <a href="/it/" title="Italiano">IT</a></li>
         </ul>
         <a href="/#download" class="nav-cta">Download Free</a>
         <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">&#9776;</button>
@@ -147,6 +148,16 @@
         requestAnimationFrame(draw);
     }
     draw();
+})();
+</script>
+
+<!-- Scroll reveal -->
+<script>
+(function() {
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 })();
 </script>
 
