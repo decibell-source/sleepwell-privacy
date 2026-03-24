@@ -473,7 +473,7 @@
         H = canvas.height = window.innerHeight;
     }
     resize();
-    window.addEventListener('resize', resize);
+    window.addEventListener('resize', resize, { passive: true });
 
     // Stars — 70 stars, top 65%, STATIC alpha (no animation)
     const stars = Array.from({length: 70}, () => ({
@@ -519,10 +519,17 @@
     }
 
     let scrollPct = 0;
+    let ticking = false;
     window.addEventListener('scroll', () => {
-        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-        scrollPct = Math.min(window.scrollY / maxScroll, 1);
-    });
+        if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(() => {
+                const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+                scrollPct = Math.min(window.scrollY / maxScroll, 1);
+                ticking = false;
+            });
+        }
+    }, { passive: true });
 
     function draw() {
         const phase = getPhaseAt(scrollPct);
