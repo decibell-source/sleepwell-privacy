@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SleepWell — Detector de Ronquidos y Tracker de Sueno</title>
     <meta name="description" content="Detecta ronquidos, descubre quien ronca en tu pareja, detecta apnea del sueno y mejora tu descanso. 6 detectores de audio, alarma inteligente. Gratis en Android.">
-    <meta name="keywords" content="detector de ronquidos, quien ronca, apnea del sueno, grabador de ronquidos, tracker de sueno, alarma inteligente, ronco, STOP-BANG">
+    <meta name="keywords" content="detector de ronquidos, quien ronca, apnea del sueno, grabador de ronquidos, tracker de sueno, alarma inteligente, ronco, test apnea del sueno">
     <meta property="og:title" content="SleepWell — Roncas? Descubrelo esta noche.">
     <meta property="og:description" content="El tracker de sueno mas completo en Android. 6 detectores de audio, analisis de ronquidos, deteccion de apnea y alarma inteligente.">
     <meta property="og:type" content="website">
@@ -34,8 +34,7 @@
             <li><a href="#features">Funciones</a></li>
             <li><a href="#who-snores">&iquest;Qui&eacute;n Ronca?</a></li>
             <li><a href="#quiz">&iquest;Ronco?</a></li>
-            <li><a href="#apnea-test">Apnea del sueño</a></li>
-            <li><a href="#pricing">Precios</a></li>
+            <li><a href="apnea-test.html">Apnea del sue&ntilde;o</a></li>
             <li><a href="../blog/">Blog</a></li>
             <li class="nav-lang"><a href="/" title="English">EN</a> | <a href="/fr/" title="Fran&ccedil;ais">FR</a> | <a href="/es/" title="Espa&ntilde;ol"><strong>ES</strong></a> | <a href="/de/" title="Deutsch">DE</a> | <a href="/it/" title="Italiano">IT</a></li>
         </ul>
@@ -249,38 +248,6 @@
 </section>
 
 <!-- ============================================ -->
-<!-- NIGHT — STOP-BANG                             -->
-<!-- ============================================ -->
-<section class="phase-section phase-deep-night" id="apnea-test" data-phase="deep-night">
-    <div class="section">
-        <div class="section-header reveal">
-            <span class="label">Test de apnea del sue&ntilde;o</span>
-            <h2>&iquest;Podr&iacute;as tener apnea del sue&ntilde;o? Desc&uacute;brelo en 30 segundos</h2>
-            <p>Responde 8 preguntas simples de s&iacute;/no que los m&eacute;dicos usan para evaluar el riesgo de apnea del sue&ntilde;o.</p>
-        </div>
-        <div id="stopbang-quiz" class="quiz-container reveal">
-            <div class="quiz-progress"><div class="quiz-progress-bar" id="stopbang-progress-bar"></div></div>
-            <div class="quiz-step active" data-step="0"><h3 class="quiz-question">1. &iquest;Roncas fuerte?</h3><p class="quiz-hint">(Lo suficiente para o&iacute;rse a trav&eacute;s de puertas cerradas)</p><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">S&iacute;</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button></div></div>
-            <div class="quiz-step" data-step="1"><h3 class="quiz-question">2. &iquest;Te sientes a menudo cansado/a durante el d&iacute;a?</h3><p class="quiz-hint">(Quedarte dormido/a conduciendo, hablando o comiendo)</p><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">S&iacute;</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button></div></div>
-            <div class="quiz-step" data-step="2"><h3 class="quiz-question">3. &iquest;Alguien ha visto que dejas de respirar mientras duermes?</h3><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">S&iacute;</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button></div></div>
-            <div class="quiz-step" data-step="3"><h3 class="quiz-question">4. &iquest;Tienes la presi&oacute;n arterial alta?</h3><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">S&iacute;</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button></div></div>
-            <div class="quiz-step" data-step="4"><h3 class="quiz-question">5. &iquest;Te consideras con sobrepeso?</h3><p class="quiz-hint">(IMC superior a 35)</p><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">S&iacute;</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button></div></div>
-            <div class="quiz-step" data-step="5"><h3 class="quiz-question">6. &iquest;Tienes m&aacute;s de 50 a&ntilde;os?</h3><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">S&iacute;</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button></div></div>
-            <div class="quiz-step" data-step="6"><h3 class="quiz-question">7. &iquest;Tienes un cuello grueso?</h3><p class="quiz-hint">(M&aacute;s de 40 cm de circunferencia)</p><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">S&iacute;</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button></div></div>
-            <div class="quiz-step" data-step="7"><h3 class="quiz-question">8. &iquest;Eres hombre?</h3><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">S&iacute;</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button></div></div>
-            <div class="quiz-result" id="stopbang-result" style="display:none;">
-                <svg viewBox="0 0 120 120" width="160" height="160"><circle cx="60" cy="60" r="52" fill="none" stroke="rgba(123,104,238,0.1)" stroke-width="8"/><circle cx="60" cy="60" r="52" fill="none" stroke-width="8" stroke-linecap="round" stroke-dasharray="327" stroke-dashoffset="327" id="stopbang-ring-progress" transform="rotate(-90 60 60)"/><text x="60" y="55" text-anchor="middle" fill="white" font-size="28" font-weight="800" id="stopbang-score-text">0</text><text x="60" y="75" text-anchor="middle" fill="#94a3b8" font-size="11">/ 8</text></svg>
-                <h3 id="stopbang-result-title" style="font-size:1.4rem; margin:20px 0 8px;"></h3>
-                <p id="stopbang-result-desc" style="color:rgba(255,255,255,0.8); max-width:560px; margin:0 auto 24px;"></p>
-                <a href="#download" class="btn btn-primary">Monitoriza tu sue&ntilde;o esta noche</a>
-                <button class="btn btn-secondary" style="margin-left:12px;" onclick="resetQuiz('stopbang')">Repetir</button>
-                <p style="color:rgba(255,255,255,0.8); font-size:0.8rem; margin-top:20px; max-width:500px; margin-left:auto; margin-right:auto;">Esto no es un consejo m&eacute;dico. Si tu puntuaci&oacute;n es 3 o m&aacute;s, te recomendamos ver a un m&eacute;dico.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================ -->
 <!-- NIGHT — Privacy, Pricing, Blog, Download      -->
 <!-- ============================================ -->
 <section class="phase-section phase-deep-night" data-phase="deep-night">
@@ -390,7 +357,7 @@
             </details>
             <details class="faq-item">
                 <summary>&iquest;Puede sustituir un estudio m&eacute;dico del sue&ntilde;o?</summary>
-                <p>No. SleepWell es una herramienta de detección y seguimiento, no un dispositivo m&eacute;dico. Si la app o el test STOP-BANG sugieren riesgo de apnea, consulta a un profesional de la salud para un diagn&oacute;stico adecuado.</p>
+                <p>No. SleepWell es una herramienta de detección y seguimiento, no un dispositivo m&eacute;dico. Si la app o el test de apnea sugieren riesgo de apnea, consulta a un profesional de la salud para un diagn&oacute;stico adecuado.</p>
             </details>
             <details class="faq-item">
                 <summary>&iquest;Cu&aacute;l es la diferencia entre Gratis y Premium?</summary>
@@ -449,7 +416,7 @@
         </div>
         <div>
             <h4>Recursos</h4>
-            <ul><li><a href="../blog/">Blog</a></li><li><a href="#quiz">Test ronquidos</a></li><li><a href="#apnea-test">Apnea del sue&ntilde;o</a></li><li><a href="../privacy.html">Privacidad</a></li><li><a href="../terms.html">Condiciones</a></li></ul>
+            <ul><li><a href="../blog/">Blog</a></li><li><a href="#quiz">Test ronquidos</a></li><li><a href="apnea-test.html">Test apnea del sue&ntilde;o</a></li><li><a href="../privacy.html">Privacidad</a></li><li><a href="../terms.html">Condiciones</a></li></ul>
         </div>
     </div>
     <div class="footer-bottom">
@@ -646,17 +613,17 @@
 // =============================
 // QUIZ
 // =============================
-const quizState = { snore: {step:0,total:8,scores:[],max:18}, stopbang: {step:0,total:8,scores:[],max:8} };
+const quizState = { snore: {step:0,total:8,scores:[],max:18} };
 
 function quizSelect(btn, id) {
     const s = quizState[id];
     s.scores.push(parseInt(btn.dataset.score));
     btn.classList.add('selected');
     setTimeout(() => {
-        const c = document.getElementById(id==='snore'?'snore-quiz':'stopbang-quiz');
+        const c = document.getElementById('snore-quiz');
         c.querySelector('.quiz-step.active').classList.remove('active');
         s.step++;
-        document.getElementById(`${id==='snore'?'snore':'stopbang'}-progress-bar`).style.width = `${(s.step/s.total)*100}%`;
+        document.getElementById('snore-progress-bar').style.width = `${(s.step/s.total)*100}%`;
         if (s.step >= s.total) showResult(id);
         else c.querySelectorAll('.quiz-step')[s.step].classList.add('active');
     }, 300);
@@ -667,33 +634,26 @@ function showResult(id) {
     document.getElementById(`${id}-result`).style.display = 'block';
     const ring = document.getElementById(`${id}-ring-progress`);
     const txt = document.getElementById(`${id}-score-text`);
-    if (id === 'stopbang') ring.setAttribute('stroke', total>=5?'#ef4444':total>=3?'#f59e0b':'#4ade80');
     setTimeout(() => {
         ring.style.transition = 'stroke-dashoffset 1s ease';
         ring.setAttribute('stroke-dashoffset', 327 - 327*total/s.max);
         txt.textContent = total;
     }, 100);
     const t = document.getElementById(`${id}-result-title`), d = document.getElementById(`${id}-result-desc`);
-    if (id === 'snore') {
-        if (total<=4) { t.textContent='Riesgo bajo de ronquido'; d.textContent="Baja probabilidad de roncar. Pero la \u00fanica forma de saberlo con certeza es grabarte."; }
-        else if (total<=9) { t.textContent='Riesgo moderado'; d.textContent="Varios factores sugieren que podr\u00edas roncar. Grabar tu sue\u00f1o te dar\u00eda una respuesta definitiva."; }
-        else if (total<=14) { t.textContent='Riesgo alto'; d.textContent="M\u00faltiples factores de riesgo. Rastrea intensidad, correlaci\u00f3n con posici\u00f3n y remedios con SleepWell."; }
-        else { t.textContent='Riesgo muy alto'; d.textContent="Tu perfil sugiere fuertemente ronquidos regulares. Recomendamos grabar Y hacer el test STOP-BANG."; }
-    } else {
-        if (total<=2) { t.textContent='Riesgo bajo'; t.style.color='#4ade80'; d.textContent="Bajo riesgo de apnea obstructiva. La monitorizaci\u00f3n puede revelar patrones ocultos."; }
-        else if (total<=4) { t.textContent='Riesgo intermedio'; t.style.color='#f59e0b'; d.textContent=`Puntuaci\u00f3n ${total}/8: considera monitorizar tus patrones respiratorios. SleepWell detecta pausas >10s seg\u00fan las directrices AASM.`; }
-        else { t.textContent='Riesgo alto'; t.style.color='#ef4444'; d.textContent=`Puntuaci\u00f3n ${total}/8: recomendamos encarecidamente consultar a un especialista del sue\u00f1o. SleepWell puede rastrear eventos para tu m\u00e9dico.`; }
-    }
+    if (total<=4) { t.textContent='Riesgo bajo de ronquido'; d.textContent="Baja probabilidad de roncar. Pero la \u00fanica forma de saberlo con certeza es grabarte."; }
+    else if (total<=9) { t.textContent='Riesgo moderado'; d.textContent="Varios factores sugieren que podr\u00edas roncar. Grabar tu sue\u00f1o te dar\u00eda una respuesta definitiva."; }
+    else if (total<=14) { t.textContent='Riesgo alto'; d.textContent="M\u00faltiples factores de riesgo. Rastrea intensidad, correlaci\u00f3n con posici\u00f3n y remedios con SleepWell."; }
+    else { t.textContent='Riesgo muy alto'; d.textContent="Tu perfil sugiere fuertemente ronquidos regulares. Recomendamos grabar Y hacer el test de apnea del sue\u00f1o."; }
 }
 
 function resetQuiz(id) {
     const s = quizState[id]; s.step=0; s.scores=[];
-    const c = document.getElementById(id==='snore'?'snore-quiz':'stopbang-quiz');
+    const c = document.getElementById('snore-quiz');
     c.querySelectorAll('.quiz-step').forEach(x=>x.classList.remove('active'));
     c.querySelectorAll('.quiz-option').forEach(x=>x.classList.remove('selected'));
     c.querySelector('.quiz-step').classList.add('active');
     document.getElementById(`${id}-result`).style.display='none';
-    document.getElementById(`${id==='snore'?'snore':'stopbang'}-progress-bar`).style.width='0%';
+    document.getElementById('snore-progress-bar').style.width='0%';
     const r=document.getElementById(`${id}-ring-progress`); r.style.transition='none'; r.setAttribute('stroke-dashoffset','327');
 }
 </script>

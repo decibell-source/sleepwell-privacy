@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SleepWell — Test di Rischio Apnea del Sonno</title>
+    <meta name="description" content="Potresti avere l'apnea del sonno? Fai questo test rapido di 30 secondi per verificare il tuo livello di rischio. Gratuito, anonimo, senza account.">
+    <link rel="icon" type="image/png" href="../app_icon.png">
+    <link rel="apple-touch-icon" href="../app_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<canvas id="sky-canvas"></canvas>
+
+<div class="page-content">
+
+<!-- NAV -->
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="/it/" class="nav-logo"><img src="../app_icon.png" alt="SleepWell" class="nav-icon">SleepWell</a>
+        <ul class="nav-links">
+            <li><a href="/#features">Funzionalit&agrave;</a></li>
+            <li><a href="/#who-snores">Chi Russa?</a></li>
+            <li><a href="/#quiz">Russo?</a></li>
+            <li><a href="apnea-test.html">Apnea del sonno</a></li>
+            <li><a href="../blog/">Blog</a></li>
+            <li class="nav-lang"><a href="/" title="English">EN</a> | <a href="/fr/" title="Fran&ccedil;ais">FR</a> | <a href="/es/" title="Espa&ntilde;ol">ES</a> | <a href="/de/" title="Deutsch">DE</a> | <a href="/it/" title="Italiano"><strong>IT</strong></a></li>
+        </ul>
+        <a href="/#download" class="nav-cta">Scarica Gratis</a>
+        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">&#9776;</button>
+    </div>
+</nav>
+
+<!-- SLEEP APNEA TEST -->
+<div class="phase-section phase-deep-night">
+    <div class="section" style="padding-top:120px;">
+        <div class="section-header reveal">
+            <span class="label">Test apnea del sonno</span>
+            <h2>Potresti avere l'apnea del sonno? Scoprilo in 30 secondi</h2>
+            <p>Rispondi a 8 semplici domande s&igrave;/no usate dai medici per valutare il rischio di apnea del sonno.</p>
+        </div>
+        <div id="stopbang-quiz" class="quiz-container reveal">
+            <div class="quiz-progress"><div class="quiz-progress-bar" id="stopbang-progress-bar"></div></div>
+            <div class="quiz-step active" data-step="0"><h3 class="quiz-question">1. Russi forte?</h3><p class="quiz-hint">(Abbastanza forte da essere sentito attraverso porte chiuse)</p><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">S&igrave;</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button></div></div>
+            <div class="quiz-step" data-step="1"><h3 class="quiz-question">2. Ti senti spesso stanco/a durante il giorno?</h3><p class="quiz-hint">(Addormentarti guidando, parlando o mangiando)</p><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">S&igrave;</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button></div></div>
+            <div class="quiz-step" data-step="2"><h3 class="quiz-question">3. Qualcuno ha notato che smetti di respirare nel sonno?</h3><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">S&igrave;</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">Non lo so</button></div></div>
+            <div class="quiz-step" data-step="3"><h3 class="quiz-question">4. Hai la pressione alta?</h3><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">S&igrave;</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button></div></div>
+            <div class="quiz-step" data-step="4"><h3 class="quiz-question">5. Ti consideri in sovrappeso?</h3><p class="quiz-hint">(IMC superiore a 35)</p><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">S&igrave;</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">Non sono sicuro/a</button></div></div>
+            <div class="quiz-step" data-step="5"><h3 class="quiz-question">6. Hai pi&ugrave; di 50 anni?</h3><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">S&igrave;</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button></div></div>
+            <div class="quiz-step" data-step="6"><h3 class="quiz-question">7. Hai un collo grosso?</h3><p class="quiz-hint">(Oltre 40 cm di circonferenza)</p><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">S&igrave;</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">Non sono sicuro/a</button></div></div>
+            <div class="quiz-step" data-step="7"><h3 class="quiz-question">8. Sei maschio?</h3><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">S&igrave;</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button></div></div>
+            <div class="quiz-result" id="stopbang-result" style="display:none;">
+                <svg viewBox="0 0 120 120" width="160" height="160"><circle cx="60" cy="60" r="52" fill="none" stroke="rgba(123,104,238,0.1)" stroke-width="8"/><circle cx="60" cy="60" r="52" fill="none" stroke-width="8" stroke-linecap="round" stroke-dasharray="327" stroke-dashoffset="327" id="stopbang-ring-progress" transform="rotate(-90 60 60)"/><text x="60" y="55" text-anchor="middle" fill="white" font-size="28" font-weight="800" id="stopbang-score-text">0</text><text x="60" y="75" text-anchor="middle" fill="#94a3b8" font-size="11">/ 8</text></svg>
+                <h3 id="stopbang-result-title" style="font-size:1.4rem; margin:20px 0 8px;"></h3>
+                <p id="stopbang-result-desc" style="color:rgba(255,255,255,0.8); max-width:560px; margin:0 auto 24px;"></p>
+                <a href="/#download" class="btn btn-primary">Monitora il tuo sonno stanotte</a>
+                <button class="btn btn-secondary" style="margin-left:12px;" onclick="resetQuiz('stopbang')">Ripeti</button>
+                <p style="color:rgba(255,255,255,0.8); font-size:0.8rem; margin-top:20px; max-width:500px; margin-left:auto; margin-right:auto;">Questo non &egrave; un parere medico. Se il tuo punteggio &egrave; 3 o pi&ugrave;, ti consigliamo di consultare un medico.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Also try the snoring quiz -->
+    <div class="section" style="padding-top:0;">
+        <div class="cta-box reveal">
+            <h3>Non sei sicuro/a di russare?</h3>
+            <p>Fai il nostro test sul rischio di russamento.</p>
+            <a href="/#quiz" class="btn btn-secondary">Fai il test sul russamento</a>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer phase-section phase-deep-night">
+    <div class="footer-grid">
+        <div>
+            <div class="footer-brand">SleepWell</div>
+            <p class="footer-desc">Il monitoraggio del sonno pi&ugrave; completo su Android. 6 rilevatori audio, sveglia intelligente e gamification per dormire meglio.</p>
+        </div>
+        <div>
+            <h4>Prodotto</h4>
+            <ul><li><a href="/#features">Funzionalit&agrave;</a></li><li><a href="/#who-snores">Chi Russa?</a></li><li><a href="/#pricing">Prezzi</a></li><li><a href="/#download">Scarica</a></li></ul>
+        </div>
+        <div>
+            <h4>Risorse</h4>
+            <ul><li><a href="../blog/">Blog</a></li><li><a href="/#quiz">Quiz Russo?</a></li><li><a href="apnea-test.html">Test apnea del sonno</a></li><li><a href="../privacy.html">Privacy</a></li><li><a href="../terms.html">Termini</a></li></ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>&copy; 2026 SleepWell di GoodApps.</span>
+        <span>Non &egrave; un dispositivo medico.</span>
+    </div>
+</footer>
+
+</div>
+
+<!-- Sky canvas (static night) -->
+<script>
+(function() {
+    const canvas = document.getElementById('sky-canvas');
+    const ctx = canvas.getContext('2d');
+    let W, H;
+    function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+    resize();
+    window.addEventListener('resize', resize);
+    const stars = Array.from({length: 50}, () => ({
+        x: Math.random(), y: Math.random() * 0.65,
+        size: Math.random() * 2.5 + 0.5,
+        baseAlpha: Math.random() * 0.4 + 0.3
+    }));
+    function draw() {
+        const grad = ctx.createLinearGradient(0, 0, 0, H);
+        grad.addColorStop(0, '#0A0E21');
+        grad.addColorStop(0.5, '#1B2838');
+        grad.addColorStop(1, '#0A0E21');
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, W, H);
+        stars.forEach(s => {
+            ctx.beginPath();
+            ctx.arc(s.x * W, s.y * H, s.size, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(255,255,255,${s.baseAlpha * 0.8})`;
+            ctx.fill();
+            if (s.size > 1.8) {
+                ctx.beginPath();
+                ctx.arc(s.x * W, s.y * H, s.size * 2.5, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(255,255,255,${s.baseAlpha * 0.15})`;
+                ctx.fill();
+            }
+        });
+        const cx = W * 0.82, cy = H * 0.2, r = Math.min(W, H) * 0.06;
+        const outerGlow = ctx.createRadialGradient(cx, cy, r, cx, cy, r * 2.5);
+        outerGlow.addColorStop(0, 'rgba(245,245,220,0.15)');
+        outerGlow.addColorStop(1, 'rgba(0,0,0,0)');
+        ctx.fillStyle = outerGlow;
+        ctx.fillRect(cx - r*3, cy - r*3, r*6, r*6);
+        ctx.beginPath();
+        ctx.arc(cx, cy, r, 0, Math.PI * 2);
+        ctx.fillStyle = '#F5F5DC';
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(cx - r*0.2, cy - r*0.1, r*0.25, 0, Math.PI*2);
+        ctx.fillStyle = 'rgba(200,195,170,0.3)';
+        ctx.fill();
+        requestAnimationFrame(draw);
+    }
+    draw();
+})();
+</script>
+
+<!-- Scroll reveal -->
+<script>
+(function() {
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+})();
+</script>
+
+<!-- Quiz logic -->
+<script>
+const quizState = { stopbang: {step:0,total:8,scores:[],max:8} };
+
+function quizSelect(btn, id) {
+    const s = quizState[id];
+    s.scores.push(parseInt(btn.dataset.score));
+    btn.classList.add('selected');
+    setTimeout(() => {
+        const c = document.getElementById('stopbang-quiz');
+        c.querySelector('.quiz-step.active').classList.remove('active');
+        s.step++;
+        document.getElementById('stopbang-progress-bar').style.width = `${(s.step/s.total)*100}%`;
+        if (s.step >= s.total) showResult(id);
+        else c.querySelectorAll('.quiz-step')[s.step].classList.add('active');
+    }, 300);
+}
+
+function showResult(id) {
+    const s = quizState[id], total = s.scores.reduce((a,b)=>a+b,0);
+    document.getElementById(`${id}-result`).style.display = 'block';
+    const ring = document.getElementById(`${id}-ring-progress`);
+    const txt = document.getElementById(`${id}-score-text`);
+    ring.setAttribute('stroke', total>=5?'#ef4444':total>=3?'#f59e0b':'#4ade80');
+    setTimeout(() => {
+        ring.style.transition = 'stroke-dashoffset 1s ease';
+        ring.setAttribute('stroke-dashoffset', 327 - 327*total/s.max);
+        txt.textContent = total;
+    }, 100);
+    const t = document.getElementById(`${id}-result-title`), d = document.getElementById(`${id}-result-desc`);
+    if (total<=2) { t.textContent='Rischio basso'; t.style.color='#4ade80'; d.textContent="Basso rischio di apnea ostruttiva del sonno. Il monitoraggio pu\u00f2 comunque rivelare schemi nascosti."; }
+    else if (total<=4) { t.textContent='Rischio intermedio'; t.style.color='#f59e0b'; d.textContent=`Punteggio ${total}/8: considera di monitorare i tuoi schemi respiratori. SleepWell rileva pause >10s.`; }
+    else { t.textContent='Rischio alto'; t.style.color='#ef4444'; d.textContent=`Punteggio ${total}/8: raccomandiamo fortemente di consultare uno specialista del sonno. SleepWell pu\u00f2 tracciare gli eventi per il tuo medico.`; }
+}
+
+function resetQuiz(id) {
+    const s = quizState[id]; s.step=0; s.scores=[];
+    const c = document.getElementById('stopbang-quiz');
+    c.querySelectorAll('.quiz-step').forEach(x=>x.classList.remove('active'));
+    c.querySelectorAll('.quiz-option').forEach(x=>x.classList.remove('selected'));
+    c.querySelector('.quiz-step').classList.add('active');
+    document.getElementById(`${id}-result`).style.display='none';
+    document.getElementById('stopbang-progress-bar').style.width='0%';
+    const r=document.getElementById(`${id}-ring-progress`); r.style.transition='none'; r.setAttribute('stroke-dashoffset','327');
+}
+</script>
+
+</body>
+</html>

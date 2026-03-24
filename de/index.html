@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SleepWell — Schnarcherkennung & Schlaf-Tracker App</title>
     <meta name="description" content="Schnarchen erkennen, herausfinden wer schnarcht, Schlafapnoe-Screening und Schlaf verbessern. 6 Audio-Detektoren, intelligenter Wecker. Kostenlos auf Android.">
-    <meta name="keywords" content="Schnarch-App, wer schnarcht, Schlafapnoe-Screening, Schnarch-Rekorder, Schlaf-Tracker, intelligenter Wecker, schnarche ich, STOP-BANG">
+    <meta name="keywords" content="Schnarch-App, wer schnarcht, Schlafapnoe-Screening, Schnarch-Rekorder, Schlaf-Tracker, intelligenter Wecker, schnarche ich, Schlafapnoe-Test">
     <meta property="og:title" content="SleepWell — Schnarchst du? Finde es heute Nacht heraus.">
     <meta property="og:description" content="Der umfassendste Schlaf-Tracker auf Android. 6 Audio-Detektoren, Schnarchanalyse, Apnoe-Screening & intelligenter Wecker.">
     <meta property="og:type" content="website">
@@ -34,8 +34,7 @@
             <li><a href="#features">Funktionen</a></li>
             <li><a href="#who-snores">Wer Schnarcht?</a></li>
             <li><a href="#quiz">Schnarche Ich?</a></li>
-            <li><a href="#apnea-test">Schlafapnoe</a></li>
-            <li><a href="#pricing">Preise</a></li>
+            <li><a href="apnea-test.html">Schlafapnoe</a></li>
             <li><a href="../blog/">Blog</a></li>
             <li class="nav-lang"><a href="/" title="English">EN</a> | <a href="/fr/" title="Fran&ccedil;ais">FR</a> | <a href="/es/" title="Espa&ntilde;ol">ES</a> | <a href="/de/" title="Deutsch"><strong>DE</strong></a> | <a href="/it/" title="Italiano">IT</a></li>
         </ul>
@@ -249,38 +248,6 @@
 </section>
 
 <!-- ============================================ -->
-<!-- NIGHT — STOP-BANG                             -->
-<!-- ============================================ -->
-<section class="phase-section phase-deep-night" id="apnea-test" data-phase="deep-night">
-    <div class="section">
-        <div class="section-header reveal">
-            <span class="label">Schlafapnoe-Check</span>
-            <h2>K&ouml;nntest du Schlafapnoe haben? Finde es in 30 Sekunden heraus</h2>
-            <p>Beantworte 8 einfache Ja/Nein-Fragen, die &Auml;rzte zur Einsch&auml;tzung des Schlafapnoe-Risikos verwenden.</p>
-        </div>
-        <div id="stopbang-quiz" class="quiz-container reveal">
-            <div class="quiz-progress"><div class="quiz-progress-bar" id="stopbang-progress-bar"></div></div>
-            <div class="quiz-step active" data-step="0"><h3 class="quiz-question">1. Schnarchst du laut?</h3><p class="quiz-hint">(Laut genug, um durch geschlossene T&uuml;ren geh&ouml;rt zu werden)</p><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">Ja</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">Nein</button></div></div>
-            <div class="quiz-step" data-step="1"><h3 class="quiz-question">2. F&uuml;hlst du dich tags&uuml;ber oft m&uuml;de?</h3><p class="quiz-hint">(Einschlafen beim Autofahren, Reden oder Essen)</p><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">Ja</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">Nein</button></div></div>
-            <div class="quiz-step" data-step="2"><h3 class="quiz-question">3. Hat jemand beobachtet, dass du im Schlaf aufh&ouml;rst zu atmen?</h3><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">Ja</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">Nein</button></div></div>
-            <div class="quiz-step" data-step="3"><h3 class="quiz-question">4. Hast du Bluthochdruck?</h3><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">Ja</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">Nein</button></div></div>
-            <div class="quiz-step" data-step="4"><h3 class="quiz-question">5. W&uuml;rdest du dich als &uuml;bergewichtig bezeichnen?</h3><p class="quiz-hint">(BMI &uuml;ber 35)</p><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">Ja</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">Nein</button></div></div>
-            <div class="quiz-step" data-step="5"><h3 class="quiz-question">6. Bist du &uuml;ber 50?</h3><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">Ja</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">Nein</button></div></div>
-            <div class="quiz-step" data-step="6"><h3 class="quiz-question">7. Hast du einen dicken Hals?</h3><p class="quiz-hint">(&Uuml;ber 40 cm Halsumfang)</p><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">Ja</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">Nein</button></div></div>
-            <div class="quiz-step" data-step="7"><h3 class="quiz-question">8. Bist du m&auml;nnlich?</h3><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">Ja</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">Nein</button></div></div>
-            <div class="quiz-result" id="stopbang-result" style="display:none;">
-                <svg viewBox="0 0 120 120" width="160" height="160"><circle cx="60" cy="60" r="52" fill="none" stroke="rgba(123,104,238,0.1)" stroke-width="8"/><circle cx="60" cy="60" r="52" fill="none" stroke-width="8" stroke-linecap="round" stroke-dasharray="327" stroke-dashoffset="327" id="stopbang-ring-progress" transform="rotate(-90 60 60)"/><text x="60" y="55" text-anchor="middle" fill="white" font-size="28" font-weight="800" id="stopbang-score-text">0</text><text x="60" y="75" text-anchor="middle" fill="#94a3b8" font-size="11">/ 8</text></svg>
-                <h3 id="stopbang-result-title" style="font-size:1.4rem; margin:20px 0 8px;"></h3>
-                <p id="stopbang-result-desc" style="color:rgba(255,255,255,0.8); max-width:560px; margin:0 auto 24px;"></p>
-                <a href="#download" class="btn btn-primary">&Uuml;berwache deinen Schlaf heute Nacht</a>
-                <button class="btn btn-secondary" style="margin-left:12px;" onclick="resetQuiz('stopbang')">Wiederholen</button>
-                <p style="color:rgba(255,255,255,0.8); font-size:0.8rem; margin-top:20px; max-width:500px; margin-left:auto; margin-right:auto;">Dies ist kein medizinischer Rat. Bei einem Score von 3 oder h&ouml;her empfehlen wir einen Arztbesuch.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================ -->
 <!-- NIGHT — Privacy, Pricing, Blog, Download      -->
 <!-- ============================================ -->
 <section class="phase-section phase-deep-night" data-phase="deep-night">
@@ -390,7 +357,7 @@
             </details>
             <details class="faq-item">
                 <summary>Kann es eine medizinische Schlafstudie ersetzen?</summary>
-                <p>Nein. SleepWell ist ein Screening- und Tracking-Tool, kein Medizinprodukt. Wenn die App oder der STOP-BANG-Test ein Schlafapnoe-Risiko nahelegt, konsultiere einen Arzt f&uuml;r eine korrekte Diagnose.</p>
+                <p>Nein. SleepWell ist ein Screening- und Tracking-Tool, kein Medizinprodukt. Wenn die App oder der Schlafapnoe-Test ein Risiko nahelegt, konsultiere einen Arzt f&uuml;r eine korrekte Diagnose.</p>
             </details>
             <details class="faq-item">
                 <summary>Was ist der Unterschied zwischen Kostenlos und Premium?</summary>
@@ -449,7 +416,7 @@
         </div>
         <div>
             <h4>Ressourcen</h4>
-            <ul><li><a href="../blog/">Blog</a></li><li><a href="#quiz">Schnarche Ich? Quiz</a></li><li><a href="#apnea-test">Schlafapnoe</a></li><li><a href="../privacy.html">Datenschutz</a></li><li><a href="../terms.html">AGB</a></li></ul>
+            <ul><li><a href="../blog/">Blog</a></li><li><a href="#quiz">Schnarche Ich? Quiz</a></li><li><a href="apnea-test.html">Schlafapnoe-Test</a></li><li><a href="../privacy.html">Datenschutz</a></li><li><a href="../terms.html">AGB</a></li></ul>
         </div>
     </div>
     <div class="footer-bottom">
@@ -646,17 +613,17 @@
 // =============================
 // QUIZ
 // =============================
-const quizState = { snore: {step:0,total:8,scores:[],max:18}, stopbang: {step:0,total:8,scores:[],max:8} };
+const quizState = { snore: {step:0,total:8,scores:[],max:18} };
 
 function quizSelect(btn, id) {
     const s = quizState[id];
     s.scores.push(parseInt(btn.dataset.score));
     btn.classList.add('selected');
     setTimeout(() => {
-        const c = document.getElementById(id==='snore'?'snore-quiz':'stopbang-quiz');
+        const c = document.getElementById('snore-quiz');
         c.querySelector('.quiz-step.active').classList.remove('active');
         s.step++;
-        document.getElementById(`${id==='snore'?'snore':'stopbang'}-progress-bar`).style.width = `${(s.step/s.total)*100}%`;
+        document.getElementById('snore-progress-bar').style.width = `${(s.step/s.total)*100}%`;
         if (s.step >= s.total) showResult(id);
         else c.querySelectorAll('.quiz-step')[s.step].classList.add('active');
     }, 300);
@@ -667,33 +634,26 @@ function showResult(id) {
     document.getElementById(`${id}-result`).style.display = 'block';
     const ring = document.getElementById(`${id}-ring-progress`);
     const txt = document.getElementById(`${id}-score-text`);
-    if (id === 'stopbang') ring.setAttribute('stroke', total>=5?'#ef4444':total>=3?'#f59e0b':'#4ade80');
     setTimeout(() => {
         ring.style.transition = 'stroke-dashoffset 1s ease';
         ring.setAttribute('stroke-dashoffset', 327 - 327*total/s.max);
         txt.textContent = total;
     }, 100);
     const t = document.getElementById(`${id}-result-title`), d = document.getElementById(`${id}-result-desc`);
-    if (id === 'snore') {
-        if (total<=4) { t.textContent='Geringes Schnarchrisiko'; d.textContent="Geringe Wahrscheinlichkeit zu schnarchen. Aber der einzige Weg es sicher zu wissen ist, sich aufzunehmen."; }
-        else if (total<=9) { t.textContent='Mittleres Schnarchrisiko'; d.textContent="Mehrere Risikofaktoren deuten darauf hin, dass du schnarchst. Eine Schlafaufnahme w\u00fcrde dir eine endg\u00fcltige Antwort geben."; }
-        else if (total<=14) { t.textContent='Hohes Schnarchrisiko'; d.textContent="Mehrere Risikofaktoren vorhanden. Verfolge Intensit\u00e4t, Positionskorrelation und Gegenma\u00dfnahmen mit SleepWell."; }
-        else { t.textContent='Sehr hohes Schnarchrisiko'; d.textContent="Dein Profil deutet stark auf regelm\u00e4\u00dfiges Schnarchen hin. Wir empfehlen Aufnahme UND den STOP-BANG-Test."; }
-    } else {
-        if (total<=2) { t.textContent='Geringes Risiko'; t.style.color='#4ade80'; d.textContent="Geringes Risiko f\u00fcr obstruktive Schlafapnoe. Monitoring kann dennoch verborgene Muster aufdecken."; }
-        else if (total<=4) { t.textContent='Mittleres Risiko'; t.style.color='#f59e0b'; d.textContent=`Score ${total}/8: Ziehe in Betracht, deine Atemmuster zu \u00fcberwachen.`; }
-        else { t.textContent='Hohes Risiko'; t.style.color='#ef4444'; d.textContent=`Score ${total}/8: Wir empfehlen dringend, einen Schlafspezialisten aufzusuchen.`; }
-    }
+    if (total<=4) { t.textContent='Geringes Schnarchrisiko'; d.textContent="Geringe Wahrscheinlichkeit zu schnarchen. Aber der einzige Weg es sicher zu wissen ist, sich aufzunehmen."; }
+    else if (total<=9) { t.textContent='Mittleres Schnarchrisiko'; d.textContent="Mehrere Risikofaktoren deuten darauf hin, dass du schnarchst. Eine Schlafaufnahme w\u00fcrde dir eine endg\u00fcltige Antwort geben."; }
+    else if (total<=14) { t.textContent='Hohes Schnarchrisiko'; d.textContent="Mehrere Risikofaktoren vorhanden. Verfolge Intensit\u00e4t, Positionskorrelation und Gegenma\u00dfnahmen mit SleepWell."; }
+    else { t.textContent='Sehr hohes Schnarchrisiko'; d.textContent="Dein Profil deutet stark auf regelm\u00e4\u00dfiges Schnarchen hin. Wir empfehlen Aufnahme UND den Schlafapnoe-Test."; }
 }
 
 function resetQuiz(id) {
     const s = quizState[id]; s.step=0; s.scores=[];
-    const c = document.getElementById(id==='snore'?'snore-quiz':'stopbang-quiz');
+    const c = document.getElementById('snore-quiz');
     c.querySelectorAll('.quiz-step').forEach(x=>x.classList.remove('active'));
     c.querySelectorAll('.quiz-option').forEach(x=>x.classList.remove('selected'));
     c.querySelector('.quiz-step').classList.add('active');
     document.getElementById(`${id}-result`).style.display='none';
-    document.getElementById(`${id==='snore'?'snore':'stopbang'}-progress-bar`).style.width='0%';
+    document.getElementById('snore-progress-bar').style.width='0%';
     const r=document.getElementById(`${id}-ring-progress`); r.style.transition='none'; r.setAttribute('stroke-dashoffset','327');
 }
 </script>
