@@ -1,38 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SleepWell — Snoring Detection & Sleep Tracker App</title>
-    <meta name="description" content="Detect snoring, find out who snores in your couple, screen for sleep apnea, and improve your sleep. 6 audio detectors, smart alarm. Free on Android.">
-    <meta name="keywords" content="snoring detection app, who snores, sleep apnea screening, snoring recorder, sleep tracker, smart alarm, do I snore, STOP-BANG">
-    <meta property="og:title" content="SleepWell — Do You Snore? Find Out Tonight.">
-    <meta property="og:description" content="The most complete sleep tracker on Android. 6 audio detectors, snoring analysis, apnea screening & smart alarm.">
+    <title>SleepWell — Rilevamento Russamento e App per il Monitoraggio del Sonno</title>
+    <meta name="description" content="Rileva il russamento, scopri chi russa nella coppia, fai lo screening per l'apnea del sonno e migliora il tuo sonno. 6 rilevatori audio, sveglia intelligente. Gratuito su Android.">
+    <meta name="keywords" content="app rilevamento russamento, chi russa, screening apnea del sonno, registratore russamento, monitoraggio sonno, sveglia intelligente, russo, STOP-BANG">
+    <meta property="og:title" content="SleepWell — Russi? Scoprilo stanotte.">
+    <meta property="og:description" content="Il monitoraggio del sonno più completo su Android. 6 rilevatori audio, analisi del russamento, screening apnea e sveglia intelligente.">
     <meta property="og:type" content="website">
-    <link rel="icon" type="image/png" href="app_icon.png">
-    <link rel="apple-touch-icon" href="app_icon.png">
+    <link rel="icon" type="image/png" href="../app_icon.png">
+    <link rel="apple-touch-icon" href="../app_icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SleepWell","operatingSystem":"Android","applicationCategory":"HealthApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}
     </script>
 </head>
 <body>
-<script>
-// Auto-redirect to user's preferred language (once per session)
-(function() {
-    if (sessionStorage.getItem('lang_chosen')) return;
-    var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-    var map = { fr: '/fr/', es: '/es/', de: '/de/', it: '/it/' };
-    var code = lang.slice(0, 2);
-    if (map[code] && window.location.pathname === '/') {
-        sessionStorage.setItem('lang_chosen', '1');
-        window.location.replace(map[code]);
-    }
-})();
-</script>
 
 <!-- Fixed sky canvas (stars, moon/sun) -->
 <canvas id="sky-canvas"></canvas>
@@ -42,17 +29,17 @@
 <!-- NAV -->
 <nav class="nav" id="main-nav">
     <div class="nav-inner">
-        <a href="/" class="nav-logo"><img src="app_icon.png" alt="SleepWell" class="nav-icon">SleepWell</a>
+        <a href="/it/" class="nav-logo"><img src="../app_icon.png" alt="SleepWell" class="nav-icon">SleepWell</a>
         <ul class="nav-links">
-            <li><a href="#features">Features</a></li>
-            <li><a href="#who-snores">Who Snores?</a></li>
-            <li><a href="#quiz">Do I Snore?</a></li>
-            <li><a href="#apnea-test">Apnea Test</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="blog/">Blog</a></li>
-            <li class="nav-lang"><a href="/" title="English"><strong>EN</strong></a> | <a href="/fr/" title="Français">FR</a> | <a href="/es/" title="Español">ES</a> | <a href="/de/" title="Deutsch">DE</a> | <a href="/it/" title="Italiano">IT</a></li>
+            <li><a href="#features">Funzionalit&agrave;</a></li>
+            <li><a href="#who-snores">Chi Russa?</a></li>
+            <li><a href="#quiz">Russo?</a></li>
+            <li><a href="#apnea-test">Test Apnea</a></li>
+            <li><a href="#pricing">Prezzi</a></li>
+            <li><a href="../blog/">Blog</a></li>
+            <li class="nav-lang"><a href="/" title="English">EN</a> | <a href="/fr/" title="Fran&ccedil;ais">FR</a> | <a href="/es/" title="Espa&ntilde;ol">ES</a> | <a href="/de/" title="Deutsch">DE</a> | <a href="/it/" title="Italiano"><strong>IT</strong></a></li>
         </ul>
-        <a href="#download" class="nav-cta">Download Free</a>
+        <a href="#download" class="nav-cta">Scarica Gratis</a>
         <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">&#9776;</button>
     </div>
 </nav>
@@ -62,14 +49,14 @@
 <!-- ============================================ -->
 <section class="hero phase-section phase-deep-night" id="home" data-phase="deep-night">
     <div class="hero-content">
-        <span class="hero-badge">Free on Android &mdash; No account required</span>
-        <h1>Do you snore?<br><span class="gradient">Find out tonight.</span></h1>
-        <p>SleepWell records, detects, and analyzes your snoring with medical-grade audio intelligence. Discover who snores, screen for sleep apnea, and wake up refreshed.</p>
+        <span class="hero-badge">Gratuito su Android &mdash; Nessun account richiesto</span>
+        <h1>Russi?<br><span class="gradient">Scoprilo stanotte.</span></h1>
+        <p>SleepWell registra, rileva e analizza il tuo russamento con intelligenza audio di grado medico. Scopri chi russa, fai lo screening per l'apnea del sonno e svegliati riposato.</p>
         <div class="hero-ctas">
             <a href="#download" class="store-badge">
-                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="48">
+                <img src="https://play.google.com/intl/it/badges/static/images/badges/it_badge_web_generic.png" alt="Disponibile su Google Play" height="48">
             </a>
-            <a href="#quiz" class="btn btn-secondary">Take the Snoring Quiz</a>
+            <a href="#quiz" class="btn btn-secondary">Fai il quiz sul russamento</a>
         </div>
     </div>
 </section>
@@ -79,19 +66,19 @@
     <div class="stats-bar reveal">
         <div>
             <div class="stat-number" data-target="6" data-counter>0</div>
-            <div class="stat-label">Audio detectors running simultaneously</div>
+            <div class="stat-label">Rilevatori audio simultanei</div>
         </div>
         <div>
             <div class="stat-number">AI</div>
-            <div class="stat-label">Neural snorer identification</div>
+            <div class="stat-label">Identificazione neuronale del russatore</div>
         </div>
         <div>
             <div class="stat-number" data-target="100" data-counter data-suffix="%">0</div>
-            <div class="stat-label">Local &amp; private &mdash; no cloud</div>
+            <div class="stat-label">Locale e privato &mdash; nessun cloud</div>
         </div>
         <div>
             <div class="stat-number" data-target="5" data-counter>0</div>
-            <div class="stat-label">Languages supported</div>
+            <div class="stat-label">Lingue supportate</div>
         </div>
     </div>
 </div>
@@ -102,8 +89,8 @@
 <section class="phase-section phase-deep-night" data-phase="deep-night">
     <div class="section how-it-works">
         <div class="section-header reveal">
-            <span class="label">How it works</span>
-            <h2>3 steps. Zero effort.</h2>
+            <span class="label">Come funziona</span>
+            <h2>3 passi. Zero sforzo.</h2>
         </div>
         <div class="steps-grid">
             <div class="step-card reveal reveal-delay-1">
@@ -111,24 +98,24 @@
                 <div class="step-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
                 </div>
-                <h3>Place your phone</h3>
-                <p>On your nightstand, plugged in. Face down to save battery.</p>
+                <h3>Posiziona il telefono</h3>
+                <p>Sul comodino, in carica. Schermo verso il basso per risparmiare batteria.</p>
             </div>
             <div class="step-card reveal reveal-delay-2">
                 <div class="step-number">2</div>
                 <div class="step-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/><path d="M19 3v4"/><path d="M21 5h-4"/></svg>
                 </div>
-                <h3>Sleep normally</h3>
-                <p>6 detectors analyze audio all night. No wearable needed.</p>
+                <h3>Dormi normalmente</h3>
+                <p>6 rilevatori analizzano l'audio tutta la notte. Nessun wearable necessario.</p>
             </div>
             <div class="step-card reveal reveal-delay-3">
                 <div class="step-number">3</div>
                 <div class="step-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
                 </div>
-                <h3>Wake up to insights</h3>
-                <p>Sleep score, snoring timeline, apnea events, position &mdash; all in one morning report.</p>
+                <h3>Svegliati con le informazioni</h3>
+                <p>Punteggio sonno, timeline russamento, eventi di apnea, posizione &mdash; tutto in un report mattutino.</p>
             </div>
         </div>
     </div>
@@ -140,52 +127,52 @@
 <section class="phase-section phase-morning" id="features" data-phase="morning">
     <div class="section" style="padding-top:80px;">
         <div class="section-header reveal">
-            <span class="label">Features</span>
-            <h2>6 detectors. 1 microphone. Zero wearables.</h2>
-            <p>Place your phone on the nightstand. SleepWell listens all night and tells you everything in the morning.</p>
+            <span class="label">Funzionalit&agrave;</span>
+            <h2>6 rilevatori. 1 microfono. Zero wearable.</h2>
+            <p>Posiziona il telefono sul comodino. SleepWell ascolta tutta la notte e ti dice tutto al mattino.</p>
         </div>
         <div class="features-grid">
             <div class="card reveal reveal-delay-1">
                 <div class="feature-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10v3"/><path d="M6 6v11"/><path d="M10 3v18"/><path d="M14 8v7"/><path d="M18 5v13"/><path d="M22 10v3"/></svg>
                 </div>
-                <h3>Snoring Detection</h3>
-                <p>FFT spectral analysis (60-500Hz) verified by YAMNet neural network. Measures intensity, duration, and frequency.</p>
+                <h3>Rilevamento russamento</h3>
+                <p>Analisi spettrale FFT (60-500Hz) verificata dalla rete neurale YAMNet. Misura intensit&agrave;, durata e frequenza.</p>
             </div>
             <div class="card reveal reveal-delay-2">
                 <div class="feature-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c-4.97 0-9-2.24-9-5v-3c0-2.76 4.03-5 9-5s9 2.24 9 5v3c0 2.76-4.03 5-9 5z"/><path d="M12 9V2"/><path d="M8 5l4-3 4 3"/></svg>
                 </div>
-                <h3>Sleep Apnea Screening</h3>
-                <p>Detects breathing pauses longer than 10s. AASM-compliant severity classification. Heart rate fusion from Wear OS.</p>
+                <h3>Screening apnea del sonno</h3>
+                <p>Rileva pause respiratorie superiori a 10s. Classificazione di gravit&agrave; conforme AASM. Fusione frequenza cardiaca da Wear OS.</p>
             </div>
             <div class="card reveal reveal-delay-3">
                 <div class="feature-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
                 </div>
-                <h3>Bruxism Detection</h3>
-                <p>Identifies teeth grinding in the 1000-2000Hz band with rhythm analysis and stage-aware confidence scoring.</p>
+                <h3>Rilevamento bruxismo</h3>
+                <p>Identifica il digrignamento dei denti nella banda 1000-2000Hz con analisi del ritmo e punteggio di confidenza adattato alla fase.</p>
             </div>
             <div class="card reveal reveal-delay-1">
                 <div class="feature-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
                 </div>
-                <h3>Sleep Talk Recorder</h3>
-                <p>Captures nighttime speech with YAMNet voice classification. Listen to what you said last night.</p>
+                <h3>Registratore di parlare nel sonno</h3>
+                <p>Cattura il parlare notturno con classificazione vocale YAMNet. Ascolta cosa hai detto la notte scorsa.</p>
             </div>
             <div class="card reveal reveal-delay-2">
                 <div class="feature-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14"/><path d="M2 20h20"/><path d="M14 12h.01"/></svg>
                 </div>
-                <h3>Position Tracking</h3>
-                <p>Accelerometer-based detection (back, side, stomach) with 3-tier accuracy. Correlates with snoring intensity.</p>
+                <h3>Tracciamento posizione</h3>
+                <p>Rilevamento tramite accelerometro (schiena, lato, pancia) con precisione a 3 livelli. Correla con l'intensit&agrave; del russamento.</p>
             </div>
             <div class="card reveal reveal-delay-3">
                 <div class="feature-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                 </div>
-                <h3>Smart Alarm</h3>
-                <p>Wakes you during your lightest sleep phase within a customizable window. No more groggy mornings.</p>
+                <h3>Sveglia intelligente</h3>
+                <p>Ti sveglia durante la fase di sonno pi&ugrave; leggera in una finestra personalizzabile. Basta mattine difficili.</p>
             </div>
         </div>
     </div>
@@ -197,35 +184,35 @@
 <section class="phase-section phase-morning" id="who-snores" data-phase="morning">
     <div class="section">
         <div class="section-header reveal">
-            <span class="label">Exclusive feature</span>
-            <h2>Who snores in your couple?</h2>
-            <p>SleepWell uses neural audio fingerprinting to identify <strong>which partner</strong> is snoring. End the morning debate with data.</p>
+            <span class="label">Funzione esclusiva</span>
+            <h2>Chi russa nella coppia?</h2>
+            <p>SleepWell usa l'impronta audio neurale per identificare <strong>quale partner</strong> russa. Metti fine al dibattito mattutino con i dati.</p>
         </div>
         <div class="hl-features">
             <div class="hl-feature reveal reveal-delay-1">
                 <div class="icon-box" style="background:rgba(255,255,255,0.12); color:#FFFFFF;">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2z"/></svg>
                 </div>
-                <h4>AI-Powered</h4>
-                <p style="color:rgba(255,255,255,0.85);">YAMNet neural network + MFCC cosine similarity builds a unique voice profile for each sleeper.</p>
+                <h4>Intelligenza artificiale</h4>
+                <p style="color:rgba(255,255,255,0.85);">La rete neurale YAMNet + similarit&agrave; coseno MFCC costruiscono un profilo vocale unico per ogni dormiente.</p>
             </div>
             <div class="hl-feature reveal reveal-delay-2">
                 <div class="icon-box" style="background:rgba(255,255,255,0.12); color:#FFFFFF;">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
                 </div>
-                <h4>3 Nights to Learn</h4>
-                <p style="color:rgba(255,255,255,0.85);">After 3 nights of data, SleepWell can attribute each snoring episode to the right person.</p>
+                <h4>3 notti di apprendimento</h4>
+                <p style="color:rgba(255,255,255,0.85);">Dopo 3 notti di dati, SleepWell pu&ograve; attribuire ogni episodio di russamento alla persona giusta.</p>
             </div>
             <div class="hl-feature reveal reveal-delay-3">
                 <div class="icon-box" style="background:rgba(255,255,255,0.12); color:#FFFFFF;">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
                 </div>
-                <h4>Attribution Pie</h4>
-                <p style="color:rgba(255,255,255,0.85);">"You: 73%. Your partner: 27%." See the breakdown with intensity details.</p>
+                <h4>Grafico di attribuzione</h4>
+                <p style="color:rgba(255,255,255,0.85);">"Tu: 73%. Il tuo partner: 27%." Vedi la suddivisione con dettagli di intensit&agrave;.</p>
             </div>
         </div>
         <div style="text-align:center; margin-top:40px;">
-            <a href="#download" class="btn btn-primary">Try "Who Snores?" Free</a>
+            <a href="#download" class="btn btn-primary">Prova "Chi Russa?" Gratis</a>
         </div>
     </div>
 </section>
@@ -236,26 +223,26 @@
 <section class="phase-section phase-deep-night" id="quiz" data-phase="deep-night">
     <div class="section">
         <div class="section-header reveal">
-            <span class="label">Interactive test</span>
-            <h2>Do I snore? Take the quick test</h2>
-            <p>Answer 8 simple questions to find out if you're likely a snorer &mdash; and what to do about it.</p>
+            <span class="label">Test interattivo</span>
+            <h2>Russo? Fai il test rapido</h2>
+            <p>Rispondi a 8 semplici domande per scoprire se probabilmente russi &mdash; e cosa fare.</p>
         </div>
         <div id="snore-quiz" class="quiz-container reveal">
             <div class="quiz-progress"><div class="quiz-progress-bar" id="snore-progress-bar"></div></div>
-            <div class="quiz-step active" data-step="0"><h3 class="quiz-question">1. Has anyone ever told you that you snore?</h3><div class="quiz-options"><button class="quiz-option" data-score="3" onclick="quizSelect(this,'snore')">Yes, regularly</button><button class="quiz-option" data-score="2" onclick="quizSelect(this,'snore')">Occasionally</button><button class="quiz-option" data-score="1" onclick="quizSelect(this,'snore')">I'm not sure</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'snore')">No, never</button></div></div>
-            <div class="quiz-step" data-step="1"><h3 class="quiz-question">2. Do you wake up with a dry mouth or sore throat?</h3><div class="quiz-options"><button class="quiz-option" data-score="2" onclick="quizSelect(this,'snore')">Almost every morning</button><button class="quiz-option" data-score="1" onclick="quizSelect(this,'snore')">Sometimes</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'snore')">Rarely or never</button></div></div>
-            <div class="quiz-step" data-step="2"><h3 class="quiz-question">3. Do you feel tired even after a full night's sleep?</h3><div class="quiz-options"><button class="quiz-option" data-score="2" onclick="quizSelect(this,'snore')">Yes, frequently</button><button class="quiz-option" data-score="1" onclick="quizSelect(this,'snore')">Occasionally</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'snore')">No, I feel rested</button></div></div>
-            <div class="quiz-step" data-step="3"><h3 class="quiz-question">4. Do you sleep on your back?</h3><div class="quiz-options"><button class="quiz-option" data-score="2" onclick="quizSelect(this,'snore')">Most of the time</button><button class="quiz-option" data-score="1" onclick="quizSelect(this,'snore')">Sometimes</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'snore')">Rarely &mdash; I sleep on my side</button></div></div>
-            <div class="quiz-step" data-step="4"><h3 class="quiz-question">5. Do you have nasal congestion or allergies?</h3><div class="quiz-options"><button class="quiz-option" data-score="2" onclick="quizSelect(this,'snore')">Yes, chronic</button><button class="quiz-option" data-score="1" onclick="quizSelect(this,'snore')">Seasonal</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'snore')">No</button></div></div>
-            <div class="quiz-step" data-step="5"><h3 class="quiz-question">6. Do you drink alcohol in the evening?</h3><div class="quiz-options"><button class="quiz-option" data-score="2" onclick="quizSelect(this,'snore')">Regularly (3+ times/week)</button><button class="quiz-option" data-score="1" onclick="quizSelect(this,'snore')">Occasionally</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'snore')">Rarely or never</button></div></div>
-            <div class="quiz-step" data-step="6"><h3 class="quiz-question">7. What's your BMI range?</h3><div class="quiz-options"><button class="quiz-option" data-score="2" onclick="quizSelect(this,'snore')">Over 30 (obese)</button><button class="quiz-option" data-score="1" onclick="quizSelect(this,'snore')">25-30 (overweight)</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'snore')">Under 25 (normal)</button></div></div>
-            <div class="quiz-step" data-step="7"><h3 class="quiz-question">8. What's your age range?</h3><div class="quiz-options"><button class="quiz-option" data-score="2" onclick="quizSelect(this,'snore')">Over 50</button><button class="quiz-option" data-score="1" onclick="quizSelect(this,'snore')">30-50</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'snore')">Under 30</button></div></div>
+            <div class="quiz-step active" data-step="0"><h3 class="quiz-question">1. Qualcuno ti ha mai detto che russi?</h3><div class="quiz-options"><button class="quiz-option" data-score="3" onclick="quizSelect(this,'snore')">S&igrave;, regolarmente</button><button class="quiz-option" data-score="2" onclick="quizSelect(this,'snore')">Occasionalmente</button><button class="quiz-option" data-score="1" onclick="quizSelect(this,'snore')">Non sono sicuro/a</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'snore')">No, mai</button></div></div>
+            <div class="quiz-step" data-step="1"><h3 class="quiz-question">2. Ti svegli con la bocca secca o mal di gola?</h3><div class="quiz-options"><button class="quiz-option" data-score="2" onclick="quizSelect(this,'snore')">Quasi ogni mattina</button><button class="quiz-option" data-score="1" onclick="quizSelect(this,'snore')">A volte</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'snore')">Raramente o mai</button></div></div>
+            <div class="quiz-step" data-step="2"><h3 class="quiz-question">3. Ti senti stanco/a anche dopo una notte intera di sonno?</h3><div class="quiz-options"><button class="quiz-option" data-score="2" onclick="quizSelect(this,'snore')">S&igrave;, frequentemente</button><button class="quiz-option" data-score="1" onclick="quizSelect(this,'snore')">Occasionalmente</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'snore')">No, mi sento riposato/a</button></div></div>
+            <div class="quiz-step" data-step="3"><h3 class="quiz-question">4. Dormi sulla schiena?</h3><div class="quiz-options"><button class="quiz-option" data-score="2" onclick="quizSelect(this,'snore')">La maggior parte del tempo</button><button class="quiz-option" data-score="1" onclick="quizSelect(this,'snore')">A volte</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'snore')">Raramente &mdash; dormo su un lato</button></div></div>
+            <div class="quiz-step" data-step="4"><h3 class="quiz-question">5. Hai congestione nasale o allergie?</h3><div class="quiz-options"><button class="quiz-option" data-score="2" onclick="quizSelect(this,'snore')">S&igrave;, croniche</button><button class="quiz-option" data-score="1" onclick="quizSelect(this,'snore')">Stagionali</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'snore')">No</button></div></div>
+            <div class="quiz-step" data-step="5"><h3 class="quiz-question">6. Bevi alcol la sera?</h3><div class="quiz-options"><button class="quiz-option" data-score="2" onclick="quizSelect(this,'snore')">Regolarmente (3+ volte/settimana)</button><button class="quiz-option" data-score="1" onclick="quizSelect(this,'snore')">Occasionalmente</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'snore')">Raramente o mai</button></div></div>
+            <div class="quiz-step" data-step="6"><h3 class="quiz-question">7. Qual &egrave; il tuo range di IMC?</h3><div class="quiz-options"><button class="quiz-option" data-score="2" onclick="quizSelect(this,'snore')">Oltre 30 (obesit&agrave;)</button><button class="quiz-option" data-score="1" onclick="quizSelect(this,'snore')">25-30 (sovrappeso)</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'snore')">Sotto 25 (normale)</button></div></div>
+            <div class="quiz-step" data-step="7"><h3 class="quiz-question">8. Qual &egrave; la tua fascia d'et&agrave;?</h3><div class="quiz-options"><button class="quiz-option" data-score="2" onclick="quizSelect(this,'snore')">Oltre 50</button><button class="quiz-option" data-score="1" onclick="quizSelect(this,'snore')">30-50</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'snore')">Sotto 30</button></div></div>
             <div class="quiz-result" id="snore-result" style="display:none;">
                 <svg viewBox="0 0 120 120" width="160" height="160"><circle cx="60" cy="60" r="52" fill="none" stroke="rgba(123,104,238,0.15)" stroke-width="8"/><circle cx="60" cy="60" r="52" fill="none" stroke="url(#rg-night)" stroke-width="8" stroke-linecap="round" stroke-dasharray="327" stroke-dashoffset="327" id="snore-ring-progress" transform="rotate(-90 60 60)"/><defs><linearGradient id="rg-night" x1="0%" y1="0%" x2="100%"><stop offset="0%" stop-color="#818cf8"/><stop offset="100%" stop-color="#c084fc"/></linearGradient></defs><text x="60" y="55" text-anchor="middle" fill="var(--deep-text)" font-size="28" font-weight="800" id="snore-score-text">0</text><text x="60" y="75" text-anchor="middle" fill="var(--deep-muted)" font-size="11">/ 18</text></svg>
                 <h3 id="snore-result-title" style="font-size:1.4rem; margin:20px 0 8px;"></h3>
                 <p id="snore-result-desc" style="opacity:0.7; max-width:500px; margin:0 auto 24px;"></p>
-                <a href="#download" class="btn btn-primary">Record Your Snoring Tonight</a>
-                <button class="btn btn-secondary" style="margin-left:12px;" onclick="resetQuiz('snore')">Retake</button>
+                <a href="#download" class="btn btn-primary">Registra il tuo russamento stanotte</a>
+                <button class="btn btn-secondary" style="margin-left:12px;" onclick="resetQuiz('snore')">Ripeti</button>
             </div>
         </div>
     </div>
@@ -267,27 +254,27 @@
 <section class="phase-section phase-deep-night" id="apnea-test" data-phase="deep-night">
     <div class="section">
         <div class="section-header reveal">
-            <span class="label">Sleep Apnea Screening</span>
-            <h2>STOP-BANG: Are you at risk for sleep apnea?</h2>
-            <p>This clinically validated questionnaire is used by doctors worldwide. 30 seconds.</p>
+            <span class="label">Screening apnea del sonno</span>
+            <h2>STOP-BANG: Sei a rischio di apnea del sonno?</h2>
+            <p>Questo questionario clinicamente validato &egrave; utilizzato dai medici di tutto il mondo. 30 secondi.</p>
         </div>
         <div id="stopbang-quiz" class="quiz-container reveal">
             <div class="quiz-progress"><div class="quiz-progress-bar" id="stopbang-progress-bar"></div></div>
-            <div class="quiz-step active" data-step="0"><h3 class="quiz-question"><strong>S</strong>noring &mdash; Do you snore loudly?</h3><p class="quiz-hint">(Loud enough to be heard through closed doors)</p><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">Yes</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button></div></div>
-            <div class="quiz-step" data-step="1"><h3 class="quiz-question"><strong>T</strong>ired &mdash; Do you often feel tired during the day?</h3><p class="quiz-hint">(Falling asleep during driving, talking, eating)</p><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">Yes</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button></div></div>
-            <div class="quiz-step" data-step="2"><h3 class="quiz-question"><strong>O</strong>bserved &mdash; Has anyone seen you stop breathing during sleep?</h3><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">Yes</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">I don't know</button></div></div>
-            <div class="quiz-step" data-step="3"><h3 class="quiz-question"><strong>P</strong>ressure &mdash; Are you treated for high blood pressure?</h3><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">Yes</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button></div></div>
-            <div class="quiz-step" data-step="4"><h3 class="quiz-question"><strong>B</strong>MI &mdash; Is your BMI over 35?</h3><p class="quiz-hint">(weight kg / height m&sup2;)</p><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">Yes</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">Not sure</button></div></div>
-            <div class="quiz-step" data-step="5"><h3 class="quiz-question"><strong>A</strong>ge &mdash; Are you over 50?</h3><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">Yes</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button></div></div>
-            <div class="quiz-step" data-step="6"><h3 class="quiz-question"><strong>N</strong>eck &mdash; Neck circumference &gt; 40 cm?</h3><p class="quiz-hint">(Measure around the Adam's apple)</p><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">Yes</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">Not sure</button></div></div>
-            <div class="quiz-step" data-step="7"><h3 class="quiz-question"><strong>G</strong>ender &mdash; Are you male?</h3><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">Yes</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button></div></div>
+            <div class="quiz-step active" data-step="0"><h3 class="quiz-question"><strong>S</strong>noring &mdash; Russi forte?</h3><p class="quiz-hint">(Abbastanza forte da essere sentito attraverso le porte chiuse)</p><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">S&igrave;</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button></div></div>
+            <div class="quiz-step" data-step="1"><h3 class="quiz-question"><strong>T</strong>ired &mdash; Ti senti spesso stanco/a durante il giorno?</h3><p class="quiz-hint">(Ti addormenti guidando, parlando, mangiando)</p><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">S&igrave;</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button></div></div>
+            <div class="quiz-step" data-step="2"><h3 class="quiz-question"><strong>O</strong>bserved &mdash; Qualcuno ti ha visto smettere di respirare nel sonno?</h3><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">S&igrave;</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">Non so</button></div></div>
+            <div class="quiz-step" data-step="3"><h3 class="quiz-question"><strong>P</strong>ressure &mdash; Sei in cura per la pressione alta?</h3><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">S&igrave;</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button></div></div>
+            <div class="quiz-step" data-step="4"><h3 class="quiz-question"><strong>B</strong>MI &mdash; Il tuo IMC &egrave; superiore a 35?</h3><p class="quiz-hint">(peso kg / altezza m&sup2;)</p><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">S&igrave;</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">Non sono sicuro/a</button></div></div>
+            <div class="quiz-step" data-step="5"><h3 class="quiz-question"><strong>A</strong>ge &mdash; Hai pi&ugrave; di 50 anni?</h3><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">S&igrave;</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button></div></div>
+            <div class="quiz-step" data-step="6"><h3 class="quiz-question"><strong>N</strong>eck &mdash; Circonferenza del collo &gt; 40 cm?</h3><p class="quiz-hint">(Misura intorno al pomo d'Adamo)</p><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">S&igrave;</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">Non sono sicuro/a</button></div></div>
+            <div class="quiz-step" data-step="7"><h3 class="quiz-question"><strong>G</strong>ender &mdash; Sei di sesso maschile?</h3><div class="quiz-options"><button class="quiz-option" data-score="1" onclick="quizSelect(this,'stopbang')">S&igrave;</button><button class="quiz-option" data-score="0" onclick="quizSelect(this,'stopbang')">No</button></div></div>
             <div class="quiz-result" id="stopbang-result" style="display:none;">
                 <svg viewBox="0 0 120 120" width="160" height="160"><circle cx="60" cy="60" r="52" fill="none" stroke="rgba(123,104,238,0.1)" stroke-width="8"/><circle cx="60" cy="60" r="52" fill="none" stroke-width="8" stroke-linecap="round" stroke-dasharray="327" stroke-dashoffset="327" id="stopbang-ring-progress" transform="rotate(-90 60 60)"/><text x="60" y="55" text-anchor="middle" fill="white" font-size="28" font-weight="800" id="stopbang-score-text">0</text><text x="60" y="75" text-anchor="middle" fill="#94a3b8" font-size="11">/ 8</text></svg>
                 <h3 id="stopbang-result-title" style="font-size:1.4rem; margin:20px 0 8px;"></h3>
                 <p id="stopbang-result-desc" style="color:rgba(255,255,255,0.8); max-width:560px; margin:0 auto 24px;"></p>
-                <a href="#download" class="btn btn-primary">Monitor Your Sleep Tonight</a>
-                <button class="btn btn-secondary" style="margin-left:12px;" onclick="resetQuiz('stopbang')">Retake</button>
-                <p style="color:rgba(255,255,255,0.8); font-size:0.8rem; margin-top:20px; max-width:500px; margin-left:auto; margin-right:auto;">Not medical advice. Score 3+: consult a healthcare professional.</p>
+                <a href="#download" class="btn btn-primary">Monitora il tuo sonno stanotte</a>
+                <button class="btn btn-secondary" style="margin-left:12px;" onclick="resetQuiz('stopbang')">Ripeti</button>
+                <p style="color:rgba(255,255,255,0.8); font-size:0.8rem; margin-top:20px; max-width:500px; margin-left:auto; margin-right:auto;">Non &egrave; un parere medico. Punteggio 3+: consulta un professionista della salute.</p>
             </div>
         </div>
     </div>
@@ -299,24 +286,24 @@
 <section class="phase-section phase-deep-night" data-phase="deep-night">
     <!-- Privacy -->
     <div class="highlight-section reveal" style="background:linear-gradient(135deg, rgba(34,197,94,0.04), rgba(16,185,129,0.06)); margin:60px auto;">
-        <span class="label" style="color:#4ade80;">Privacy first</span>
-        <h2>Your data stays on your phone. Period.</h2>
-        <p style="color:rgba(255,255,255,0.8);">No cloud. No account. No ads. Ever. All processing happens locally on your device.</p>
+        <span class="label" style="color:#4ade80;">Privacy prima di tutto</span>
+        <h2>I tuoi dati restano sul tuo telefono. Punto.</h2>
+        <p style="color:rgba(255,255,255,0.8);">Nessun cloud. Nessun account. Nessuna pubblicit&agrave;. Mai. Tutta l'elaborazione avviene localmente sul tuo dispositivo.</p>
         <div class="hl-features">
             <div class="hl-feature reveal reveal-delay-1">
                 <div class="icon-box" style="background:rgba(34,197,94,0.1); color:#4ade80;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-                <h4>100% Local</h4>
-                <p style="color:rgba(255,255,255,0.8);">No internet required during sleep monitoring.</p>
+                <h4>100% Locale</h4>
+                <p style="color:rgba(255,255,255,0.8);">Nessuna connessione internet necessaria durante il monitoraggio del sonno.</p>
             </div>
             <div class="hl-feature reveal reveal-delay-2">
                 <div class="icon-box" style="background:rgba(34,197,94,0.1); color:#4ade80;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-                <h4>GDPR Compliant</h4>
-                <p style="color:rgba(255,255,255,0.8);">Export or delete all data anytime. JSON &amp; CSV.</p>
+                <h4>Conforme GDPR</h4>
+                <p style="color:rgba(255,255,255,0.8);">Esporta o elimina tutti i tuoi dati in qualsiasi momento. JSON &amp; CSV.</p>
             </div>
             <div class="hl-feature reveal reveal-delay-3">
                 <div class="icon-box" style="background:rgba(34,197,94,0.1); color:#4ade80;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-                <h4>Zero Ads</h4>
-                <p style="color:rgba(255,255,255,0.8);">We sell a product, not your data.</p>
+                <h4>Zero pubblicit&agrave;</h4>
+                <p style="color:rgba(255,255,255,0.8);">Vendiamo un prodotto, non i tuoi dati.</p>
             </div>
         </div>
     </div>
@@ -324,29 +311,29 @@
     <!-- Works with -->
     <div class="section works-with">
         <div class="section-header reveal">
-            <span class="label">Integrations</span>
-            <h2>Works with your ecosystem</h2>
+            <span class="label">Integrazioni</span>
+            <h2>Funziona con il tuo ecosistema</h2>
         </div>
         <div class="integrations-grid reveal">
             <div class="integration-item">
                 <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="1" width="12" height="22" rx="2"/><circle cx="12" cy="18" r="1"/><path d="M8 4h8"/></svg>
                 <span class="integration-name">Android 8.0+</span>
-                <span class="integration-desc">Any Android phone</span>
+                <span class="integration-desc">Qualsiasi telefono Android</span>
             </div>
             <div class="integration-item">
                 <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/><circle cx="12" cy="12" r="6" stroke-dasharray="2 2"/></svg>
                 <span class="integration-name">Wear OS</span>
-                <span class="integration-desc">Tiles, complications &amp; heart rate</span>
+                <span class="integration-desc">Tile, complicazioni e frequenza cardiaca</span>
             </div>
             <div class="integration-item">
                 <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6 6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg>
                 <span class="integration-name">Health Connect</span>
-                <span class="integration-desc">Sync sleep &amp; heart rate data</span>
+                <span class="integration-desc">Sincronizza sonno e frequenza cardiaca</span>
             </div>
             <div class="integration-item">
                 <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
                 <span class="integration-name">Google Fit</span>
-                <span class="integration-desc">Activity &amp; wellness data</span>
+                <span class="integration-desc">Dati di attivit&agrave; e benessere</span>
             </div>
         </div>
     </div>
@@ -354,68 +341,68 @@
     <!-- Pricing -->
     <div class="section" id="pricing">
         <div class="section-header reveal">
-            <span class="label">Pricing</span>
-            <h2>Simple, honest pricing</h2>
-            <p>Start free, upgrade when you're ready. No hidden fees.</p>
+            <span class="label">Prezzi</span>
+            <h2>Prezzi semplici e onesti</h2>
+            <p>Inizia gratis, passa a Premium quando sei pronto. Nessun costo nascosto.</p>
         </div>
         <div class="pricing-cards">
             <div class="pricing-card card reveal reveal-delay-1">
-                <h3>Free</h3>
+                <h3>Gratuito</h3>
                 <div class="pricing-amount">0&euro;</div>
-                <div class="pricing-period">forever</div>
-                <ul class="pricing-features"><li>Sleep score &amp; analysis</li><li>Snoring detection</li><li>Smart alarm</li><li>Position tracking</li><li>Ambient sounds</li><li>Sleep stages</li><li>Badges &amp; challenges</li></ul>
-                <a href="#download" class="btn btn-secondary" style="width:100%; justify-content:center;">Get Started</a>
+                <div class="pricing-period">per sempre</div>
+                <ul class="pricing-features"><li>Punteggio sonno e analisi</li><li>Rilevamento russamento</li><li>Sveglia intelligente</li><li>Tracciamento posizione</li><li>Suoni ambientali</li><li>Fasi del sonno</li><li>Badge e sfide</li></ul>
+                <a href="#download" class="btn btn-secondary" style="width:100%; justify-content:center;">Inizia</a>
             </div>
             <div class="pricing-card card featured reveal reveal-delay-2">
-                <span class="badge-label">Best Value</span>
+                <span class="badge-label">Miglior Valore</span>
                 <h3>Premium</h3>
                 <div class="pricing-amount">19.99&euro;</div>
-                <div class="pricing-period">per year &mdash; 1.67&euro;/month</div>
-                <ul class="pricing-features"><li>Everything in Free</li><li>Audio recordings &amp; playback</li><li>Detailed apnea analysis</li><li>Bruxism &amp; sleep talk insights</li><li>"Who Snores?" identification</li><li>Weekly coaching</li><li>Position trends</li><li>Data export (JSON/CSV)</li></ul>
-                <a href="#download" class="btn btn-primary" style="width:100%; justify-content:center;">Start 14-Day Free Trial</a>
+                <div class="pricing-period">all'anno &mdash; 1,67&euro;/mese</div>
+                <ul class="pricing-features"><li>Tutto del piano Gratuito</li><li>Registrazioni audio e riproduzione</li><li>Analisi dettagliata apnea</li><li>Approfondimenti bruxismo e parlare nel sonno</li><li>Identificazione "Chi Russa?"</li><li>Coaching settimanale</li><li>Tendenze posizione</li><li>Esportazione dati (JSON/CSV)</li></ul>
+                <a href="#download" class="btn btn-primary" style="width:100%; justify-content:center;">Prova Gratuita di 14 Giorni</a>
             </div>
         </div>
-        <p style="text-align:center; color:rgba(255,255,255,0.8); font-size:0.85rem; margin-top:24px;">Also: 2.99&euro;/month. Cancel anytime.</p>
+        <p style="text-align:center; color:rgba(255,255,255,0.8); font-size:0.85rem; margin-top:24px;">Anche: 2,99&euro;/mese. Cancella quando vuoi.</p>
     </div>
 
     <!-- FAQ -->
     <div class="section" id="faq">
         <div class="section-header reveal">
             <span class="label">FAQ</span>
-            <h2>Common questions</h2>
+            <h2>Domande frequenti</h2>
         </div>
         <div class="faq-list reveal">
             <details class="faq-item">
-                <summary>Does it drain my battery?</summary>
-                <p>SleepWell uses only the microphone and accelerometer &mdash; no GPS, no screen. Average consumption is 8-12% over a full night. We recommend plugging in your phone.</p>
+                <summary>Consuma la batteria?</summary>
+                <p>SleepWell usa solo il microfono e l'accelerometro &mdash; niente GPS, niente schermo. Il consumo medio &egrave; dell'8-12% per una notte intera. Ti consigliamo di tenere il telefono in carica.</p>
             </details>
             <details class="faq-item">
-                <summary>Is my microphone recording all night?</summary>
-                <p>The microphone listens continuously for audio events, but nothing is sent anywhere. All processing is 100% local. Audio clips are only saved when snoring, bruxism, or sleep talk is detected &mdash; and you can delete them anytime.</p>
+                <summary>Il microfono registra tutta la notte?</summary>
+                <p>Il microfono ascolta continuamente gli eventi audio, ma nulla viene inviato da nessuna parte. Tutta l'elaborazione &egrave; 100% locale. Le clip audio vengono salvate solo quando viene rilevato russamento, bruxismo o parlare nel sonno &mdash; e puoi eliminarle in qualsiasi momento.</p>
             </details>
             <details class="faq-item">
-                <summary>Does it work without a smartwatch?</summary>
-                <p>Yes. All 6 detectors work with just your phone. A Wear OS watch adds heart rate data for better apnea detection and sleep stage estimation, but it's entirely optional.</p>
+                <summary>Funziona senza smartwatch?</summary>
+                <p>S&igrave;. Tutti e 6 i rilevatori funzionano solo con il telefono. Un orologio Wear OS aggiunge i dati della frequenza cardiaca per un migliore rilevamento dell'apnea e una stima delle fasi del sonno, ma &egrave; del tutto opzionale.</p>
             </details>
             <details class="faq-item">
-                <summary>How accurate is the snoring detection?</summary>
-                <p>SleepWell combines FFT spectral analysis with Google's YAMNet neural network to verify detections. This dual approach filters out false positives like traffic noise or a partner's movements.</p>
+                <summary>Quanto &egrave; accurato il rilevamento del russamento?</summary>
+                <p>SleepWell combina l'analisi spettrale FFT con la rete neurale YAMNet di Google per verificare i rilevamenti. Questo doppio approccio filtra i falsi positivi come il rumore del traffico o i movimenti del partner.</p>
             </details>
             <details class="faq-item">
-                <summary>Can it replace a medical sleep study?</summary>
-                <p>No. SleepWell is a screening and tracking tool, not a medical device. If the app or the STOP-BANG test suggests sleep apnea risk, consult a healthcare professional for a proper diagnosis.</p>
+                <summary>Pu&ograve; sostituire uno studio medico del sonno?</summary>
+                <p>No. SleepWell &egrave; uno strumento di screening e monitoraggio, non un dispositivo medico. Se l'app o il test STOP-BANG suggeriscono un rischio di apnea del sonno, consulta un professionista sanitario per una diagnosi corretta.</p>
             </details>
             <details class="faq-item">
-                <summary>What's the difference between Free and Premium?</summary>
-                <p>Free gives you full detection (snoring, position, smart alarm, sleep score). Premium unlocks audio recordings, detailed apnea analysis, bruxism &amp; sleep talk insights, "Who Snores?" identification, weekly coaching, and data export.</p>
+                <summary>Qual &egrave; la differenza tra Gratuito e Premium?</summary>
+                <p>Il piano Gratuito offre il rilevamento completo (russamento, posizione, sveglia intelligente, punteggio sonno). Il Premium sblocca le registrazioni audio, l'analisi dettagliata dell'apnea, gli approfondimenti su bruxismo e parlare nel sonno, l'identificazione "Chi Russa?", il coaching settimanale e l'esportazione dei dati.</p>
             </details>
             <details class="faq-item">
-                <summary>Where should I place my phone?</summary>
-                <p>On your nightstand, within 1 meter of your head. Face down is recommended to save battery. The microphone picks up sounds clearly from this distance.</p>
+                <summary>Dove devo posizionare il telefono?</summary>
+                <p>Sul comodino, entro 1 metro dalla testa. Si consiglia di tenerlo con lo schermo verso il basso per risparmiare batteria. Il microfono capta chiaramente i suoni da questa distanza.</p>
             </details>
             <details class="faq-item">
-                <summary>Can two people use the app at the same time?</summary>
-                <p>Yes! The "Who Snores?" feature uses AI to identify which partner is snoring. After 3 nights of learning, it attributes each snoring episode to the right person.</p>
+                <summary>Due persone possono usare l'app contemporaneamente?</summary>
+                <p>S&igrave;! La funzione "Chi Russa?" usa l'IA per identificare quale partner russa. Dopo 3 notti di apprendimento, attribuisce ogni episodio di russamento alla persona giusta.</p>
             </details>
         </div>
     </div>
@@ -424,28 +411,28 @@
     <div class="section" id="blog">
         <div class="section-header reveal">
             <span class="label">Blog</span>
-            <h2>Sleep better. Learn why.</h2>
-            <p>Evidence-based articles about snoring, sleep quality, and how to improve your nights.</p>
+            <h2>Dormi meglio. Scopri perch&eacute;.</h2>
+            <p>Articoli basati su evidenze scientifiche su russamento, qualit&agrave; del sonno e come migliorare le tue notti.</p>
         </div>
         <div class="blog-grid">
-            <a href="blog/why-do-i-snore-at-night.html" class="blog-card card reveal reveal-delay-1"><div class="blog-card-body"><span class="blog-card-tag">Snoring</span><h3>Why Do I Snore at Night?</h3><p>Do you snore without realizing it? Understand why snoring happens and what it reveals about your sleep.</p><span class="read-more">Read <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div></a>
-            <a href="blog/is-snoring-normal.html" class="blog-card card reveal reveal-delay-2"><div class="blog-card-body"><span class="blog-card-tag">Health</span><h3>Is Snoring Normal or a Health Problem?</h3><p>Snoring is common, but is it always harmless? Learn when to worry.</p><span class="read-more">Read <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div></a>
-            <a href="blog/how-to-know-if-you-snore.html" class="blog-card card reveal reveal-delay-3"><div class="blog-card-body"><span class="blog-card-tag">Detection</span><h3>How to Know If You Snore</h3><p>Most people don't know they snore. 3 methods to find out for sure.</p><span class="read-more">Read <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div></a>
-            <a href="blog/what-causes-snoring.html" class="blog-card card reveal reveal-delay-1"><div class="blog-card-body"><span class="blog-card-tag">Causes</span><h3>What Causes Snoring?</h3><p>Snoring has multiple causes. Understand your specific triggers and how to track them.</p><span class="read-more">Read <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div></a>
-            <a href="blog/how-loud-is-snoring.html" class="blog-card card reveal reveal-delay-2"><div class="blog-card-body"><span class="blog-card-tag">Analysis</span><h3>How Loud Is Snoring? What's Normal?</h3><p>From barely noticeable to extremely loud. Why measuring intensity matters.</p><span class="read-more">Read <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div></a>
+            <a href="../blog/why-do-i-snore-at-night.html" class="blog-card card reveal reveal-delay-1"><div class="blog-card-body"><span class="blog-card-tag">Russamento</span><h3>Perch&eacute; russo di notte?</h3><p>Russi senza rendertene conto? Scopri perch&eacute; si russa e cosa rivela sul tuo sonno.</p><span class="read-more">Leggi <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div></a>
+            <a href="../blog/is-snoring-normal.html" class="blog-card card reveal reveal-delay-2"><div class="blog-card-body"><span class="blog-card-tag">Salute</span><h3>Russare &egrave; normale o un problema di salute?</h3><p>Russare &egrave; comune, ma &egrave; sempre innocuo? Scopri quando preoccuparti.</p><span class="read-more">Leggi <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div></a>
+            <a href="../blog/how-to-know-if-you-snore.html" class="blog-card card reveal reveal-delay-3"><div class="blog-card-body"><span class="blog-card-tag">Rilevamento</span><h3>Come sapere se russi</h3><p>La maggior parte delle persone non sa di russare. 3 metodi per scoprirlo con certezza.</p><span class="read-more">Leggi <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div></a>
+            <a href="../blog/what-causes-snoring.html" class="blog-card card reveal reveal-delay-1"><div class="blog-card-body"><span class="blog-card-tag">Cause</span><h3>Cosa causa il russamento?</h3><p>Il russamento ha molteplici cause. Comprendi i tuoi fattori specifici e come monitorarli.</p><span class="read-more">Leggi <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div></a>
+            <a href="../blog/how-loud-is-snoring.html" class="blog-card card reveal reveal-delay-2"><div class="blog-card-body"><span class="blog-card-tag">Analisi</span><h3>Quanto &egrave; forte il russamento? Cosa &egrave; normale?</h3><p>Da appena percepibile a estremamente forte. Perch&eacute; misurare l'intensit&agrave; &egrave; importante.</p><span class="read-more">Leggi <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div></a>
         </div>
     </div>
 
     <!-- Download CTA -->
     <div class="highlight-section reveal" id="download" style="margin-bottom:0;">
-        <h2>Start tracking your sleep tonight</h2>
-        <p style="color:rgba(255,255,255,0.8);">Free on Google Play. No account required. Place your phone on the nightstand and discover what happens while you sleep.</p>
+        <h2>Inizia a monitorare il tuo sonno stanotte</h2>
+        <p style="color:rgba(255,255,255,0.8);">Gratuito su Google Play. Nessun account necessario. Posiziona il telefono sul comodino e scopri cosa succede mentre dormi.</p>
         <div style="margin-top:32px;">
             <a href="#" class="store-badge">
-                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="54">
+                <img src="https://play.google.com/intl/it/badges/static/images/badges/it_badge_web_generic.png" alt="Disponibile su Google Play" height="54">
             </a>
         </div>
-        <p style="color:rgba(255,255,255,0.8); font-size:0.85rem; margin-top:20px;">Android 8.0+ &mdash; Wear OS supported</p>
+        <p style="color:rgba(255,255,255,0.8); font-size:0.85rem; margin-top:20px;">Android 8.0+ &mdash; Wear OS supportato</p>
     </div>
 </section>
 
@@ -454,20 +441,20 @@
     <div class="footer-grid">
         <div>
             <div class="footer-brand">SleepWell</div>
-            <p class="footer-desc">The most complete sleep tracker on Android. 6 audio detectors, smart alarm, and gamification for better sleep.</p>
+            <p class="footer-desc">Il monitoraggio del sonno pi&ugrave; completo su Android. 6 rilevatori audio, sveglia intelligente e gamification per dormire meglio.</p>
         </div>
         <div>
-            <h4>Product</h4>
-            <ul><li><a href="#features">Features</a></li><li><a href="#who-snores">Who Snores?</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#download">Download</a></li></ul>
+            <h4>Prodotto</h4>
+            <ul><li><a href="#features">Funzionalit&agrave;</a></li><li><a href="#who-snores">Chi Russa?</a></li><li><a href="#pricing">Prezzi</a></li><li><a href="#download">Scarica</a></li></ul>
         </div>
         <div>
-            <h4>Resources</h4>
-            <ul><li><a href="blog/">Blog</a></li><li><a href="#quiz">Do I Snore? Quiz</a></li><li><a href="#apnea-test">STOP-BANG Test</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul>
+            <h4>Risorse</h4>
+            <ul><li><a href="../blog/">Blog</a></li><li><a href="#quiz">Quiz Russo?</a></li><li><a href="#apnea-test">Test STOP-BANG</a></li><li><a href="../privacy.html">Privacy</a></li><li><a href="../terms.html">Termini</a></li></ul>
         </div>
     </div>
     <div class="footer-bottom">
-        <span>&copy; 2026 SleepWell by GoodApps.</span>
-        <span>Not a medical device.</span>
+        <span>&copy; 2026 SleepWell di GoodApps.</span>
+        <span>Non &egrave; un dispositivo medico.</span>
     </div>
 </footer>
 
@@ -688,14 +675,14 @@ function showResult(id) {
     }, 100);
     const t = document.getElementById(`${id}-result-title`), d = document.getElementById(`${id}-result-desc`);
     if (id === 'snore') {
-        if (total<=4) { t.textContent='Low snoring risk'; d.textContent="Low probability of snoring. But the only way to know for sure is to record yourself."; }
-        else if (total<=9) { t.textContent='Moderate snoring risk'; d.textContent="Several risk factors suggest you may snore. Recording your sleep would give you a definitive answer."; }
-        else if (total<=14) { t.textContent='High snoring risk'; d.textContent="Multiple risk factors present. Track intensity, position correlation, and remedies with SleepWell."; }
-        else { t.textContent='Very high snoring risk'; d.textContent="Your profile strongly suggests regular snoring. We recommend recording AND taking the STOP-BANG apnea screening."; }
+        if (total<=4) { t.textContent='Rischio basso di russamento'; d.textContent="Bassa probabilit\u00e0 di russare. Ma l'unico modo per saperlo con certezza \u00e8 registrarti."; }
+        else if (total<=9) { t.textContent='Rischio moderato'; d.textContent="Diversi fattori suggeriscono che potresti russare. Registrare il sonno ti darebbe una risposta definitiva."; }
+        else if (total<=14) { t.textContent='Rischio alto'; d.textContent="Molteplici fattori di rischio. Monitora intensit\u00e0, correlazione con la posizione e rimedi con SleepWell."; }
+        else { t.textContent='Rischio molto alto'; d.textContent="Il tuo profilo suggerisce fortemente un russamento regolare. Raccomandiamo la registrazione E il test STOP-BANG."; }
     } else {
-        if (total<=2) { t.textContent='Low risk'; t.style.color='#4ade80'; d.textContent="Low risk for obstructive sleep apnea. Monitoring can still reveal hidden patterns."; }
-        else if (total<=4) { t.textContent='Intermediate risk'; t.style.color='#f59e0b'; d.textContent=`Score ${total}/8: consider monitoring breathing patterns. SleepWell detects pauses >10s per AASM guidelines.`; }
-        else { t.textContent='High risk'; t.style.color='#ef4444'; d.textContent=`Score ${total}/8: we strongly recommend consulting a sleep specialist. SleepWell can track events for your doctor.`; }
+        if (total<=2) { t.textContent='Rischio basso'; t.style.color='#4ade80'; d.textContent="Basso rischio di apnea ostruttiva del sonno. Il monitoraggio pu\u00f2 comunque rivelare schemi nascosti."; }
+        else if (total<=4) { t.textContent='Rischio intermedio'; t.style.color='#f59e0b'; d.textContent=`Punteggio ${total}/8: considera di monitorare i tuoi schemi respiratori.`; }
+        else { t.textContent='Rischio alto'; t.style.color='#ef4444'; d.textContent=`Punteggio ${total}/8: raccomandiamo fortemente di consultare uno specialista del sonno.`; }
     }
 }
 

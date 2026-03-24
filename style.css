@@ -110,6 +110,10 @@ img { max-width: 100%; height: auto; }
 }
 .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(255,215,0,0.3); }
 .nav-toggle { display: none; background: none; border: none; color: var(--deep-text); font-size: 1.5rem; cursor: pointer; }
+.nav-lang { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--deep-muted); }
+.nav-lang a { color: var(--deep-muted); font-size: 0.8rem; font-weight: 400; }
+.nav-lang a:hover { color: var(--deep-text); }
+.nav-lang strong { color: var(--deep-text); }
 .nav-links.show {
     display: flex; flex-direction: column; position: absolute;
     top: 64px; left: 0; right: 0; background: rgba(10,14,33,0.98);
