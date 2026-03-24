@@ -318,6 +318,7 @@ img { max-width: 100%; height: auto; }
 .pricing-card {
     border-radius: var(--radius); padding: 40px 32px; text-align: center;
     position: relative; transition: transform 0.3s, box-shadow 0.3s;
+    overflow: visible;
 }
 .pricing-card:hover { transform: translateY(-4px); }
 .pricing-card.featured { border-color: var(--gold); box-shadow: 0 0 60px rgba(255,215,0,0.06); }
