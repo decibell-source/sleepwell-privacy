@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SleepWell — Rilevamento Russamento e App per il Monitoraggio del Sonno</title>
-    <meta name="description" content="Rileva il russamento, scopri chi russa nella coppia, fai lo screening per l'apnea del sonno e migliora il tuo sonno. 6 rilevatori audio, sveglia intelligente. Gratuito su Android.">
+    <meta name="description" content="Rileva il russamento, scopri chi russa nella coppia, fai lo screening per l'apnea del sonno e migliora il tuo sonno. 6 rilevatori audio, sveglia intelligente. Beta presto su Android.">
     <meta name="keywords" content="app rilevamento russamento, chi russa, screening apnea del sonno, registratore russamento, monitoraggio sonno, sveglia intelligente, russo, test apnea del sonno">
     <meta property="og:title" content="SleepWell — Russi? Scoprilo stanotte.">
     <meta property="og:description" content="Il monitoraggio del sonno più completo su Android. 6 rilevatori audio, analisi del russamento, screening apnea e sveglia intelligente.">
@@ -14,9 +14,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
     <link rel="stylesheet" href="../style.css">
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SleepWell","operatingSystem":"Android","applicationCategory":"HealthApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SleepWell","operatingSystem":"Android","applicationCategory":"HealthApplication"}
     </script>
     <meta property="og:image" content="https://joinsleepwell.com/og-image.png">
     <meta property="og:image:width" content="1200">
@@ -49,7 +50,7 @@
             <li><a href="blog/index.html">Blog</a></li>
             <li class="nav-lang"><a href="/" title="English">EN</a> | <a href="/fr/" title="Fran&ccedil;ais">FR</a> | <a href="/es/" title="Espa&ntilde;ol">ES</a> | <a href="/de/" title="Deutsch">DE</a> | <a href="/it/" title="Italiano"><strong>IT</strong></a></li>
         </ul>
-        <a href="https://play.google.com/store/apps/details?id=com.goodapps.sleepwell" target="_blank" rel="noopener" class="nav-cta">Scarica Gratis</a>
+        <a href="#beta-signup" class="nav-cta">Unisciti alla beta</a>
         <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">&#9776;</button>
     </div>
 </nav>
@@ -59,14 +60,12 @@
 <!-- ============================================ -->
 <section class="hero phase-section phase-deep-night" id="home" data-phase="deep-night">
     <div class="hero-content">
-        <span class="hero-badge">Gratuito su Android &mdash; Nessun account richiesto</span>
+        <span class="hero-badge">Beta in arrivo — Tra i primi 100 tester</span>
         <h1>Russi?<br><span class="gradient">Scoprilo stanotte.</span></h1>
         <p>SleepWell ascolta mentre dormi, rileva il russamento e ti racconta tutto al mattino. Scopri chi russa, verifica i segnali di apnea del sonno e svegliati sapendo di più sulle tue notti.</p>
         <div class="hero-ctas">
-            <a href="https://play.google.com/store/apps/details?id=com.goodapps.sleepwell" target="_blank" rel="noopener" class="store-badge">
-                <img src="https://play.google.com/intl/it/badges/static/images/badges/it_badge_web_generic.png" alt="Disponibile su Google Play" height="40">
-            </a>
-            <a href="#quiz" class="btn btn-secondary">Fai il quiz sul russamento</a>
+            <a href="#beta-signup" class="btn btn-primary">Ottieni l'accesso anticipato</a>
+            <a href="#features" class="btn btn-secondary">Come funziona</a>
         </div>
     </div>
 </section>
@@ -106,7 +105,7 @@
             <div class="step-card reveal reveal-delay-1">
                 <div class="step-number">1</div>
                 <div class="step-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                    <i class="ph-duotone ph-device-mobile" style="font-size:32px;"></i>
                 </div>
                 <h3>Posiziona il telefono</h3>
                 <p>Sul comodino, in carica. Schermo verso il basso per risparmiare batteria.</p>
@@ -114,7 +113,7 @@
             <div class="step-card reveal reveal-delay-2">
                 <div class="step-number">2</div>
                 <div class="step-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/><path d="M19 3v4"/><path d="M21 5h-4"/></svg>
+                    <i class="ph-duotone ph-moon" style="font-size:32px;"></i>
                 </div>
                 <h3>Dormi normalmente</h3>
                 <p>6 rilevatori analizzano l'audio tutta la notte. Nessun wearable necessario.</p>
@@ -122,7 +121,7 @@
             <div class="step-card reveal reveal-delay-3">
                 <div class="step-number">3</div>
                 <div class="step-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    <i class="ph-duotone ph-chart-line-up" style="font-size:32px;"></i>
                 </div>
                 <h3>Svegliati con le informazioni</h3>
                 <p>Punteggio sonno, timeline russamento, eventi di apnea, posizione &mdash; tutto in un report mattutino.</p>
@@ -142,48 +141,188 @@
             <p>Posiziona il telefono sul comodino. SleepWell ascolta tutta la notte e ti dice tutto al mattino.</p>
         </div>
         <div class="features-grid">
-            <div class="card reveal reveal-delay-1">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10v3"/><path d="M6 6v11"/><path d="M10 3v18"/><path d="M14 8v7"/><path d="M18 5v13"/><path d="M22 10v3"/></svg>
+            <div class="feature-card reveal reveal-delay-1">
+                <div class="feature-card__visual feature-visual--snoring">
+                    <svg class="feature-visual__svg" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet">
+                        <defs>
+                            <linearGradient id="snore-bar-grad" x1="0" y1="1" x2="0" y2="0">
+                                <stop offset="0%" stop-color="#818cf8" stop-opacity="0.9"/>
+                                <stop offset="100%" stop-color="#c084fc" stop-opacity="0.9"/>
+                            </linearGradient>
+                            <filter id="snore-bloom" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/>
+                                <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                            </filter>
+                        </defs>
+                        <ellipse cx="200" cy="120" rx="120" ry="80" fill="#c084fc" opacity="0.06"/>
+                        <ellipse cx="200" cy="110" rx="80" ry="60" fill="#c084fc" opacity="0.08"/>
+                        <g opacity="0.12">
+                            <rect x="52" y="155" width="6" height="18" rx="3" fill="#818cf8"/><rect x="64" y="155" width="6" height="32" rx="3" fill="#818cf8"/><rect x="76" y="155" width="6" height="22" rx="3" fill="#818cf8"/><rect x="88" y="155" width="6" height="38" rx="3" fill="#9085f8"/><rect x="100" y="155" width="6" height="28" rx="3" fill="#9085f8"/><rect x="112" y="155" width="6" height="45" rx="3" fill="#a07cf8"/><rect x="124" y="155" width="6" height="35" rx="3" fill="#a07cf8"/><rect x="136" y="155" width="6" height="52" rx="3" fill="#b07af8"/><rect x="148" y="155" width="6" height="60" rx="3" fill="#b07af8"/><rect x="160" y="155" width="6" height="72" rx="3" fill="#c084fc"/><rect x="172" y="155" width="6" height="65" rx="3" fill="#c084fc"/><rect x="184" y="155" width="6" height="80" rx="3" fill="#c084fc"/><rect x="196" y="155" width="6" height="75" rx="3" fill="#c084fc"/><rect x="208" y="155" width="6" height="70" rx="3" fill="#c084fc"/><rect x="220" y="155" width="6" height="58" rx="3" fill="#b07af8"/><rect x="232" y="155" width="6" height="40" rx="3" fill="#a07cf8"/><rect x="244" y="155" width="6" height="40" rx="3" fill="#a07cf8"/><rect x="256" y="155" width="6" height="50" rx="3" fill="#9085f8"/><rect x="268" y="155" width="6" height="35" rx="3" fill="#9085f8"/><rect x="280" y="155" width="6" height="42" rx="3" fill="#9085f8"/><rect x="292" y="155" width="6" height="30" rx="3" fill="#818cf8"/><rect x="304" y="155" width="6" height="25" rx="3" fill="#818cf8"/><rect x="316" y="155" width="6" height="32" rx="3" fill="#818cf8"/><rect x="328" y="155" width="6" height="20" rx="3" fill="#818cf8"/><rect x="340" y="155" width="6" height="15" rx="3" fill="#818cf8"/>
+                        </g>
+                        <g filter="url(#snore-bloom)">
+                            <rect x="52" y="137" width="6" height="18" rx="3" fill="url(#snore-bar-grad)"/><rect x="64" y="123" width="6" height="32" rx="3" fill="url(#snore-bar-grad)"/><rect x="76" y="133" width="6" height="22" rx="3" fill="url(#snore-bar-grad)"/><rect x="88" y="117" width="6" height="38" rx="3" fill="url(#snore-bar-grad)"/><rect x="100" y="127" width="6" height="28" rx="3" fill="url(#snore-bar-grad)"/><rect x="112" y="110" width="6" height="45" rx="3" fill="url(#snore-bar-grad)"/><rect x="124" y="120" width="6" height="35" rx="3" fill="url(#snore-bar-grad)"/><rect x="136" y="103" width="6" height="52" rx="3" fill="url(#snore-bar-grad)"/><rect x="148" y="95" width="6" height="60" rx="3" fill="url(#snore-bar-grad)"/><rect x="160" y="83" width="6" height="72" rx="3" fill="url(#snore-bar-grad)"/><rect x="172" y="90" width="6" height="65" rx="3" fill="url(#snore-bar-grad)"/><rect x="184" y="75" width="6" height="80" rx="3" fill="url(#snore-bar-grad)"/><rect x="196" y="80" width="6" height="75" rx="3" fill="url(#snore-bar-grad)"/><rect x="208" y="85" width="6" height="70" rx="3" fill="url(#snore-bar-grad)"/><rect x="220" y="97" width="6" height="58" rx="3" fill="url(#snore-bar-grad)"/><rect x="232" y="107" width="6" height="40" rx="3" fill="url(#snore-bar-grad)"/><rect x="244" y="115" width="6" height="40" rx="3" fill="url(#snore-bar-grad)"/><rect x="256" y="105" width="6" height="50" rx="3" fill="url(#snore-bar-grad)"/><rect x="268" y="120" width="6" height="35" rx="3" fill="url(#snore-bar-grad)"/><rect x="280" y="113" width="6" height="42" rx="3" fill="url(#snore-bar-grad)"/><rect x="292" y="125" width="6" height="30" rx="3" fill="url(#snore-bar-grad)"/><rect x="304" y="130" width="6" height="25" rx="3" fill="url(#snore-bar-grad)"/><rect x="316" y="123" width="6" height="32" rx="3" fill="url(#snore-bar-grad)"/><rect x="328" y="135" width="6" height="20" rx="3" fill="url(#snore-bar-grad)"/><rect x="340" y="140" width="6" height="15" rx="3" fill="url(#snore-bar-grad)"/>
+                        </g>
+                        <circle cx="187" cy="74" r="2" fill="#e0b3ff" opacity="0.8"/><circle cx="163" cy="82" r="2" fill="#e0b3ff" opacity="0.7"/><circle cx="199" cy="79" r="2" fill="#e0b3ff" opacity="0.7"/>
+                    </svg>
                 </div>
-                <h3>Rilevamento russamento</h3>
-                <p>Distingue tra russamento e rumore di fondo. Misura intensità, durata e frequenza del tuo russamento ogni notte.</p>
+                <div class="feature-card__content">
+                    <h3 class="feature-card__title">
+                        <i class="ph-duotone ph-waveform" style="font-size:20px;"></i>
+                        Rilevamento russamento
+                    </h3>
+                    <p class="feature-card__description">Distingue tra russamento e rumore di fondo. Misura intensità, durata e frequenza del tuo russamento ogni notte.</p>
+                </div>
             </div>
-            <div class="card reveal reveal-delay-2">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c-4.97 0-9-2.24-9-5v-3c0-2.76 4.03-5 9-5s9 2.24 9 5v3c0 2.76-4.03 5-9 5z"/><path d="M12 9V2"/><path d="M8 5l4-3 4 3"/></svg>
+            <div class="feature-card reveal reveal-delay-2">
+                <div class="feature-card__visual feature-visual--apnea">
+                    <svg class="feature-visual__svg" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet">
+                        <defs>
+                            <filter id="apnea-glow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+                                <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                            </filter>
+                            <radialGradient id="pulse-glow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#FF8C42" stop-opacity="0.6"/>
+                                <stop offset="100%" stop-color="#FF8C42" stop-opacity="0"/>
+                            </radialGradient>
+                        </defs>
+                        <g filter="url(#apnea-glow)">
+                            <path d="M10,105 L30,105 L35,102 Q38,100 40,105 L42,105 L44,108 L46,50 L49,140 L52,95 L55,105 L60,108 Q63,110 66,105 L80,105 L90,105 L95,102 Q98,100 100,105 L102,105 L104,108 L106,50 L109,140 L112,95 L115,105 L120,108 Q123,110 126,105 L140,105" fill="none" stroke="#E8976B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M140,105 L250,105" fill="none" stroke="#E8976B" stroke-width="2" stroke-linecap="round" opacity="0.5" stroke-dasharray="1 3"/>
+                            <path d="M250,105 L255,105 L257,108 L259,60 L262,135 L265,98 L268,105 L273,108 Q276,110 278,105 L290,105 L295,102 Q298,100 300,105 L302,105 L304,107 L306,55 L309,138 L312,96 L315,105 L320,108 Q323,110 326,105 L345,105 L350,102 Q353,100 355,105 L357,105 L359,107 L361,52 L364,138 L367,96 L370,105 L375,108 Q378,110 380,105 L395,105" fill="none" stroke="#FF8C42" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <circle cx="380" cy="105" r="12" fill="url(#pulse-glow)"/><circle cx="380" cy="105" r="4" fill="#FF8C42" opacity="0.9"/><circle cx="380" cy="105" r="6" fill="none" stroke="#FF8C42" stroke-width="1" opacity="0.4"/>
+                    </svg>
                 </div>
-                <h3>Screening apnea del sonno</h3>
-                <p>Rileva quando smetti di respirare per più di 10 secondi. Valuta la gravità da lieve a grave. Ancora meglio con un orologio Wear OS.</p>
-                <div data-mark="disclaimer-apnea" style="display:flex;gap:10px;align-items:flex-start;margin-top:14px;padding:12px 14px;background:rgba(245,158,11,0.10);border-left:3px solid #f59e0b;border-radius:8px;color:#fbbf24;font-size:0.82rem;line-height:1.45;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><span><strong>Importante.</strong> SleepWell è uno strumento di screening, non un dispositivo di diagnostica medica. Consulta sempre un professionista sanitario.</span></div>
+                <div class="feature-card__content">
+                    <h3 class="feature-card__title">
+                        <i class="ph-duotone ph-shield-check" style="font-size:20px;"></i>
+                        Screening apnea del sonno
+                    </h3>
+                    <p class="feature-card__description">Rileva quando smetti di respirare per più di 10 secondi. Valuta la gravità da lieve a grave. Ancora meglio con un orologio Wear OS.</p>
+                    <div data-mark="disclaimer-apnea" style="display:flex;gap:10px;align-items:flex-start;margin-top:14px;padding:12px 14px;background:rgba(245,158,11,0.10);border-left:3px solid #f59e0b;border-radius:8px;color:#fbbf24;font-size:0.82rem;line-height:1.45;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><span><strong>Importante.</strong> SleepWell è uno strumento di screening, non un dispositivo di diagnostica medica. Consulta sempre un professionista sanitario.</span></div>
+                </div>
             </div>
-            <div class="card reveal reveal-delay-3">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            <div class="feature-card reveal reveal-delay-3">
+                <div class="feature-card__visual feature-visual--bruxism">
+                    <svg class="feature-visual__svg" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet">
+                        <defs>
+                            <radialGradient id="brux-hotspot" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#c084fc" stop-opacity="0.3"/><stop offset="100%" stop-color="#c084fc" stop-opacity="0"/></radialGradient>
+                            <radialGradient id="brux-hotspot2" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#a855f7" stop-opacity="0.25"/><stop offset="100%" stop-color="#a855f7" stop-opacity="0"/></radialGradient>
+                        </defs>
+                        <ellipse cx="200" cy="100" rx="100" ry="70" fill="url(#brux-hotspot)"/>
+                        <ellipse cx="160" cy="90" rx="60" ry="45" fill="url(#brux-hotspot2)"/>
+                        <ellipse cx="245" cy="105" rx="55" ry="40" fill="url(#brux-hotspot2)"/>
+                        <circle cx="185" cy="88" r="8" fill="#c084fc" opacity="0.55"/><circle cx="200" cy="95" r="9" fill="#c084fc" opacity="0.6"/><circle cx="215" cy="90" r="7.5" fill="#c084fc" opacity="0.5"/><circle cx="195" cy="105" r="8.5" fill="#a855f7" opacity="0.55"/><circle cx="210" cy="102" r="7" fill="#c084fc" opacity="0.48"/><circle cx="180" cy="100" r="6.5" fill="#a855f7" opacity="0.45"/><circle cx="225" cy="98" r="6" fill="#a855f7" opacity="0.42"/><circle cx="190" cy="78" r="6" fill="#c084fc" opacity="0.4"/><circle cx="207" cy="82" r="7" fill="#c084fc" opacity="0.45"/><circle cx="220" cy="108" r="5.5" fill="#a855f7" opacity="0.38"/>
+                        <circle cx="165" cy="82" r="5" fill="#a855f7" opacity="0.32"/><circle cx="155" cy="95" r="5.5" fill="#a855f7" opacity="0.3"/><circle cx="240" cy="88" r="5" fill="#a855f7" opacity="0.28"/><circle cx="235" cy="112" r="4.5" fill="#a855f7" opacity="0.3"/><circle cx="170" cy="115" r="5" fill="#c084fc" opacity="0.28"/><circle cx="200" cy="118" r="5" fill="#a855f7" opacity="0.32"/><circle cx="175" cy="72" r="4" fill="#c084fc" opacity="0.25"/><circle cx="228" cy="78" r="4.5" fill="#a855f7" opacity="0.26"/><circle cx="250" cy="100" r="4" fill="#a855f7" opacity="0.24"/><circle cx="145" cy="105" r="4.5" fill="#c084fc" opacity="0.22"/>
+                        <circle cx="130" cy="90" r="3" fill="#a855f7" opacity="0.15"/><circle cx="120" cy="105" r="2.5" fill="#a855f7" opacity="0.12"/><circle cx="140" cy="75" r="2.5" fill="#c084fc" opacity="0.13"/><circle cx="260" cy="92" r="3" fill="#a855f7" opacity="0.14"/><circle cx="265" cy="108" r="2.5" fill="#a855f7" opacity="0.12"/><circle cx="255" cy="80" r="2" fill="#c084fc" opacity="0.1"/><circle cx="160" cy="125" r="2.5" fill="#a855f7" opacity="0.12"/><circle cx="245" cy="120" r="2" fill="#a855f7" opacity="0.1"/>
+                        <circle cx="85" cy="95" r="1.5" fill="#a855f7" opacity="0.04"/><circle cx="295" cy="100" r="1.5" fill="#a855f7" opacity="0.04"/><circle cx="310" cy="95" r="1" fill="#a855f7" opacity="0.03"/>
+                        <path d="M140,55 Q155,50 200,48 Q245,50 260,55 Q275,70 278,95 Q275,125 260,140 Q240,155 200,160 Q160,155 140,140 Q125,125 122,95 Q125,70 140,55Z" fill="none" stroke="#c084fc" stroke-width="1" opacity="0.1"/>
+                    </svg>
                 </div>
-                <h3>Rilevamento bruxismo</h3>
-                <p>Rileva il digrignamento dei denti mentre dormi. Monitora episodi, durata e intensità per condividere i dati con il tuo dentista.</p>
+                <div class="feature-card__content">
+                    <h3 class="feature-card__title">
+                        <i class="ph-duotone ph-tooth" style="font-size:20px;"></i>
+                        Rilevamento bruxismo
+                    </h3>
+                    <p class="feature-card__description">Rileva il digrignamento dei denti mentre dormi. Monitora episodi, durata e intensità per condividere i dati con il tuo dentista.</p>
+                </div>
             </div>
-            <div class="card reveal reveal-delay-1">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            <div class="feature-card reveal reveal-delay-1">
+                <div class="feature-card__visual feature-visual--sleeptalk">
+                    <svg class="feature-visual__svg" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet">
+                        <defs>
+                            <linearGradient id="wave-fill-top" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#818cf8" stop-opacity="0.7"/><stop offset="100%" stop-color="#60a5fa" stop-opacity="0.1"/></linearGradient>
+                            <linearGradient id="wave-fill-bot" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#818cf8" stop-opacity="0.7"/><stop offset="100%" stop-color="#60a5fa" stop-opacity="0.1"/></linearGradient>
+                            <clipPath id="played-clip"><rect x="30" y="0" width="210" height="200"/></clipPath>
+                            <clipPath id="unplayed-clip"><rect x="240" y="0" width="140" height="200"/></clipPath>
+                        </defs>
+                        <rect x="30" y="178" width="340" height="2" rx="1" fill="#818cf8" opacity="0.1"/>
+                        <rect x="30" y="178" width="210" height="2" rx="1" fill="#60a5fa" opacity="0.4"/>
+                        <g clip-path="url(#played-clip)">
+                            <path d="M30,95 L35,92 L38,88 L42,80 L45,72 L48,78 L52,85 L55,90 L58,88 L62,75 L65,62 L68,55 L72,60 L75,70 L78,82 L82,88 L85,91 L88,86 L92,70 L95,58 L98,48 L102,42 L105,50 L108,62 L112,72 L115,80 L118,88 L122,92 L125,94 L128,90 L132,82 L135,70 L138,58 L142,50 L145,55 L148,65 L152,75 L155,82 L158,88 L162,92 L165,94 L168,91 L172,85 L175,75 L178,60 L182,48 L185,40 L188,35 L192,40 L195,52 L198,65 L202,75 L205,82 L208,88 L212,92 L215,94 L218,91 L222,82 L225,70 L228,60 L232,68 L235,78 L238,88 L240,92" fill="url(#wave-fill-top)" stroke="#818cf8" stroke-width="1.5"/>
+                            <path d="M30,105 L35,108 L38,112 L42,120 L45,128 L48,122 L52,115 L55,110 L58,112 L62,125 L65,138 L68,145 L72,140 L75,130 L78,118 L82,112 L85,109 L88,114 L92,130 L95,142 L98,152 L102,158 L105,150 L108,138 L112,128 L115,120 L118,112 L122,108 L125,106 L128,110 L132,118 L135,130 L138,142 L142,150 L145,145 L148,135 L152,125 L155,118 L158,112 L162,108 L165,106 L168,109 L172,115 L175,125 L178,140 L182,152 L185,160 L188,165 L192,160 L195,148 L198,135 L202,125 L205,118 L208,112 L212,108 L215,106 L218,109 L222,118 L225,130 L228,140 L232,132 L235,122 L238,112 L240,108" fill="url(#wave-fill-bot)" stroke="#818cf8" stroke-width="1.5"/>
+                        </g>
+                        <g clip-path="url(#unplayed-clip)" opacity="0.35">
+                            <path d="M240,92 L242,90 L245,85 L248,78 L252,72 L255,80 L258,88 L262,92 L265,94 L268,91 L272,82 L275,72 L278,65 L282,60 L285,65 L288,75 L292,82 L295,88 L298,92 L302,94 L305,92 L308,85 L312,78 L315,72 L318,80 L322,85 L325,90 L328,92 L332,94 L335,92 L338,88 L342,82 L345,78 L348,82 L352,88 L355,92 L358,94 L362,92 L365,90 L368,92 L370,94" fill="url(#wave-fill-top)" stroke="#818cf8" stroke-width="1"/>
+                            <path d="M240,108 L242,110 L245,115 L248,122 L252,128 L255,120 L258,112 L262,108 L265,106 L268,109 L272,118 L275,128 L278,135 L282,140 L285,135 L288,125 L292,118 L295,112 L298,108 L302,106 L305,108 L308,115 L312,122 L315,128 L318,120 L322,115 L325,110 L328,108 L332,106 L335,108 L338,112 L342,118 L345,122 L348,118 L352,112 L355,108 L358,106 L362,108 L365,110 L368,108 L370,106" fill="url(#wave-fill-bot)" stroke="#818cf8" stroke-width="1"/>
+                        </g>
+                        <line x1="240" y1="30" x2="240" y2="175" stroke="#60a5fa" stroke-width="1.5" opacity="0.6"/>
+                        <circle cx="240" cy="179" r="5" fill="#60a5fa" opacity="0.8"/>
+                    </svg>
                 </div>
-                <h3>Registratore di parlare nel sonno</h3>
-                <p>Registra quello che dici nel sonno. Riascolta le tue conversazioni notturne più divertenti — o più misteriose.</p>
+                <div class="feature-card__content">
+                    <h3 class="feature-card__title">
+                        <i class="ph-duotone ph-microphone" style="font-size:20px;"></i>
+                        Registratore di parlare nel sonno
+                    </h3>
+                    <p class="feature-card__description">Registra quello che dici nel sonno. Riascolta le tue conversazioni notturne più divertenti — o più misteriose.</p>
+                </div>
             </div>
-            <div class="card reveal reveal-delay-2">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14"/><path d="M2 20h20"/><path d="M14 12h.01"/></svg>
+            <div class="feature-card reveal reveal-delay-2">
+                <div class="feature-card__visual feature-visual--position">
+                    <svg class="feature-visual__svg" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet">
+                        <defs>
+                            <radialGradient id="radar-bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#4ade80" stop-opacity="0.05"/><stop offset="100%" stop-color="#4ade80" stop-opacity="0"/></radialGradient>
+                            <linearGradient id="trail-grad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#4ade80" stop-opacity="0"/><stop offset="100%" stop-color="#4ade80" stop-opacity="0.7"/></linearGradient>
+                            <filter id="pos-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="3"/></filter>
+                        </defs>
+                        <ellipse cx="175" cy="100" rx="90" ry="90" fill="url(#radar-bg)"/>
+                        <circle cx="175" cy="100" r="85" fill="none" stroke="#4ade80" stroke-width="0.5" opacity="0.08"/>
+                        <circle cx="175" cy="100" r="65" fill="none" stroke="#4ade80" stroke-width="0.5" opacity="0.1"/>
+                        <circle cx="175" cy="100" r="45" fill="none" stroke="#4ade80" stroke-width="0.5" opacity="0.12"/>
+                        <circle cx="175" cy="100" r="25" fill="none" stroke="#4ade80" stroke-width="0.5" opacity="0.15"/>
+                        <line x1="85" y1="100" x2="265" y2="100" stroke="#4ade80" stroke-width="0.4" opacity="0.08"/>
+                        <line x1="175" y1="10" x2="175" y2="190" stroke="#4ade80" stroke-width="0.4" opacity="0.08"/>
+                        <path d="M175,15 A85,85 0 0,1 253,55" fill="none" stroke="#818cf8" stroke-width="8" opacity="0.15" stroke-linecap="round"/>
+                        <path d="M175,15 A85,85 0 0,0 97,55" fill="none" stroke="#818cf8" stroke-width="8" opacity="0.15" stroke-linecap="round"/>
+                        <path d="M253,55 A85,85 0 0,1 253,145" fill="none" stroke="#4ade80" stroke-width="12" opacity="0.2" stroke-linecap="round"/>
+                        <path d="M97,55 A85,85 0 0,0 97,145" fill="none" stroke="#4ade80" stroke-width="12" opacity="0.2" stroke-linecap="round"/>
+                        <path d="M97,145 A85,85 0 0,0 253,145" fill="none" stroke="#E8976B" stroke-width="5" opacity="0.12" stroke-linecap="round"/>
+                        <path d="M145,50 Q130,60 135,80 Q140,95 155,90 Q170,85 165,70 Q160,55 175,60 Q190,65 200,80 Q210,95 195,105 Q180,115 170,100 Q160,85 170,75 Q180,65 190,72 Q200,80 195,90" fill="none" stroke="url(#trail-grad)" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="145" cy="50" r="1.5" fill="#818cf8" opacity="0.2"/><circle cx="135" cy="80" r="1.5" fill="#4ade80" opacity="0.25"/><circle cx="155" cy="90" r="2" fill="#4ade80" opacity="0.3"/><circle cx="175" cy="60" r="2" fill="#818cf8" opacity="0.35"/><circle cx="200" cy="80" r="2" fill="#4ade80" opacity="0.4"/><circle cx="195" cy="105" r="2.5" fill="#4ade80" opacity="0.5"/><circle cx="170" cy="100" r="2.5" fill="#4ade80" opacity="0.55"/>
+                        <g filter="url(#pos-glow)"><circle cx="195" cy="90" r="6" fill="#4ade80" opacity="0.5"/></g>
+                        <circle cx="195" cy="90" r="4" fill="#4ade80" opacity="0.9"/><circle cx="195" cy="90" r="7" fill="none" stroke="#4ade80" stroke-width="1" opacity="0.3"/>
+                    </svg>
                 </div>
-                <h3>Tracciamento posizione</h3>
-                <p>Sa se dormi sulla schiena, su un lato o a pancia in giù. Guarda come la tua posizione influenza il russamento — potresti sorprenderti.</p>
+                <div class="feature-card__content">
+                    <h3 class="feature-card__title">
+                        <i class="ph-duotone ph-bed" style="font-size:20px;"></i>
+                        Tracciamento posizione
+                    </h3>
+                    <p class="feature-card__description">Sa se dormi sulla schiena, su un lato o a pancia in giù. Guarda come la tua posizione influenza il russamento — potresti sorprenderti.</p>
+                </div>
             </div>
-            <div class="card reveal reveal-delay-3">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div class="feature-card reveal reveal-delay-3">
+                <div class="feature-card__visual feature-visual--alarm">
+                    <svg class="feature-visual__svg" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet">
+                        <defs>
+                            <linearGradient id="sunrise-grad" x1="0.7" y1="1" x2="0.7" y2="0"><stop offset="0%" stop-color="#FFB347" stop-opacity="0.25"/><stop offset="40%" stop-color="#FF8C42" stop-opacity="0.08"/><stop offset="100%" stop-color="#FF8C42" stop-opacity="0"/></linearGradient>
+                            <linearGradient id="hypno-grad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#818cf8" stop-opacity="0.6"/><stop offset="70%" stop-color="#c084fc" stop-opacity="0.7"/><stop offset="100%" stop-color="#FFB347" stop-opacity="0.8"/></linearGradient>
+                            <linearGradient id="hypno-fill" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#818cf8" stop-opacity="0.08"/><stop offset="70%" stop-color="#c084fc" stop-opacity="0.06"/><stop offset="100%" stop-color="#FFB347" stop-opacity="0.1"/></linearGradient>
+                            <linearGradient id="wake-zone" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFB347" stop-opacity="0.15"/><stop offset="100%" stop-color="#FFB347" stop-opacity="0.03"/></linearGradient>
+                            <radialGradient id="sun-glow" cx="100%" cy="80%" r="40%"><stop offset="0%" stop-color="#FFB347" stop-opacity="0.35"/><stop offset="50%" stop-color="#FF8C42" stop-opacity="0.12"/><stop offset="100%" stop-color="#FF8C42" stop-opacity="0"/></radialGradient>
+                            <filter id="alarm-glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/><feComposite in="SourceGraphic" in2="blur" operator="over"/></filter>
+                        </defs>
+                        <rect x="280" y="0" width="120" height="200" fill="url(#sunrise-grad)"/>
+                        <circle cx="400" cy="160" r="80" fill="url(#sun-glow)"/>
+                        <rect x="310" y="30" width="55" height="140" rx="4" fill="url(#wake-zone)"/>
+                        <path d="M30,45 L30,105 L50,105 L55,145 L75,145 L80,140 L100,145 L105,105 L115,75 L130,75 L135,105 L155,105 L160,145 L180,145 L185,140 L195,145 L200,105 L210,75 L225,75 L228,45 L232,75 L245,105 L260,105 L265,145 L280,145 L285,105 L300,105 L305,75 L315,75 L320,105 L330,105 L340,75 L345,45 L350,45 L380,45" fill="url(#hypno-fill)"/>
+                        <g filter="url(#alarm-glow)"><path d="M30,105 L50,105 L55,145 L75,145 L80,140 L100,145 L105,105 L115,75 L130,75 L135,105 L155,105 L160,145 L180,145 L185,140 L195,145 L200,105 L210,75 L225,75 L228,45 L232,75 L245,105 L260,105 L265,145 L280,145 L285,105 L300,105 L305,75 L315,75 L320,105 L330,105 L340,75 L345,45" fill="none" stroke="url(#hypno-grad)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/></g>
+                        <path d="M30,105 L50,105 L55,145 L75,145 L80,140 L100,145 L105,105 L115,75 L130,75 L135,105 L155,105 L160,145 L180,145 L185,140 L195,145 L200,105 L210,75 L225,75 L228,45 L232,75 L245,105 L260,105 L265,145 L280,145 L285,105 L300,105 L305,75 L315,75 L320,105 L330,105 L340,75 L345,45" fill="none" stroke="url(#hypno-grad)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" opacity="0.1"/>
+                        <circle cx="118" cy="73" r="1.5" fill="#c084fc" opacity="0.4"/><circle cx="123" cy="74" r="1" fill="#c084fc" opacity="0.3"/><circle cx="128" cy="73" r="1.5" fill="#c084fc" opacity="0.35"/><circle cx="213" cy="73" r="1.5" fill="#c084fc" opacity="0.4"/><circle cx="218" cy="74" r="1" fill="#c084fc" opacity="0.3"/>
+                        <circle cx="345" cy="45" r="5" fill="#FFB347" opacity="0.7"/><circle cx="345" cy="45" r="8" fill="#FFB347" opacity="0.2"/><circle cx="345" cy="45" r="12" fill="#FFB347" opacity="0.08"/>
+                        <path d="M341,42 L345,38 L349,42" fill="none" stroke="#FFB347" stroke-width="1.2" opacity="0.6" stroke-linecap="round"/>
+                        <line x1="343" y1="49" x2="347" y2="49" stroke="#FFB347" stroke-width="1" opacity="0.5" stroke-linecap="round"/>
+                    </svg>
                 </div>
-                <h3>Sveglia intelligente</h3>
-                <p>Ti sveglia durante la fase di sonno pi&ugrave; leggera in una finestra personalizzabile. Basta mattine difficili.</p>
+                <div class="feature-card__content">
+                    <h3 class="feature-card__title">
+                        <i class="ph-duotone ph-alarm" style="font-size:20px;"></i>
+                        Sveglia intelligente
+                    </h3>
+                    <p class="feature-card__description">Ti sveglia durante la fase di sonno pi&ugrave; leggera in una finestra personalizzabile. Basta mattine difficili.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -202,28 +341,28 @@
         <div class="hl-features">
             <div class="hl-feature reveal reveal-delay-1">
                 <div class="icon-box" style="background:rgba(255,255,255,0.12); color:#FFFFFF;">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2z"/></svg>
+                    <i class="ph-duotone ph-brain" style="font-size:30px;"></i>
                 </div>
                 <h4>Intelligenza artificiale</h4>
                 <p style="color:rgba(255,255,255,0.85);">L'app crea un profilo vocale unico per ogni persona nella stanza, come un'impronta digitale del russamento.</p>
             </div>
             <div class="hl-feature reveal reveal-delay-2">
                 <div class="icon-box" style="background:rgba(255,255,255,0.12); color:#FFFFFF;">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                    <i class="ph-duotone ph-moon-stars" style="font-size:30px;"></i>
                 </div>
                 <h4>3 notti di apprendimento</h4>
                 <p style="color:rgba(255,255,255,0.85);">Dopo 3 notti di dati, SleepWell pu&ograve; attribuire ogni episodio di russamento alla persona giusta.</p>
             </div>
             <div class="hl-feature reveal reveal-delay-3">
                 <div class="icon-box" style="background:rgba(255,255,255,0.12); color:#FFFFFF;">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+                    <i class="ph-duotone ph-chart-pie-slice" style="font-size:30px;"></i>
                 </div>
                 <h4>Grafico di attribuzione</h4>
                 <p style="color:rgba(255,255,255,0.85);">"Tu: 73%. Il tuo partner: 27%." Vedi la suddivisione con dettagli di intensit&agrave;.</p>
             </div>
         </div>
         <div style="text-align:center; margin-top:40px;">
-            <a href="https://play.google.com/store/apps/details?id=com.goodapps.sleepwell" target="_blank" rel="noopener" class="btn btn-primary">Prova "Chi Russa?" Gratis</a>
+            <a href="#beta-signup" class="btn btn-primary">Ottieni l'accesso anticipato</a>
         </div>
     </div>
 </section>
@@ -252,7 +391,7 @@
                 <svg viewBox="0 0 120 120" width="160" height="160"><circle cx="60" cy="60" r="52" fill="none" stroke="rgba(123,104,238,0.15)" stroke-width="8"/><circle cx="60" cy="60" r="52" fill="none" stroke="url(#rg-night)" stroke-width="8" stroke-linecap="round" stroke-dasharray="327" stroke-dashoffset="327" id="snore-ring-progress" transform="rotate(-90 60 60)"/><defs><linearGradient id="rg-night" x1="0%" y1="0%" x2="100%"><stop offset="0%" stop-color="#818cf8"/><stop offset="100%" stop-color="#c084fc"/></linearGradient></defs><text x="60" y="55" text-anchor="middle" fill="var(--deep-text)" font-size="28" font-weight="800" id="snore-score-text">0</text><text x="60" y="75" text-anchor="middle" fill="var(--deep-muted)" font-size="11">/ 18</text></svg>
                 <h3 id="snore-result-title" style="font-size:1.4rem; margin:20px 0 8px;"></h3>
                 <p id="snore-result-desc" style="opacity:0.7; max-width:500px; margin:0 auto 24px;"></p>
-                <a href="https://play.google.com/store/apps/details?id=com.goodapps.sleepwell" target="_blank" rel="noopener" class="btn btn-primary">Registra il tuo russamento stanotte</a>
+                <a href="#beta-signup" class="btn btn-primary">Ottieni accesso beta</a>
                 <button class="btn btn-secondary" style="margin-left:12px;" onclick="resetQuiz('snore')">Ripeti</button>
             </div>
         </div>
@@ -270,17 +409,17 @@
         <p style="color:rgba(255,255,255,0.8);">Nessun cloud. Nessun account. Nessuna pubblicit&agrave;. Mai. Tutta l'elaborazione avviene localmente sul tuo dispositivo.</p>
         <div class="hl-features">
             <div class="hl-feature reveal reveal-delay-1">
-                <div class="icon-box" style="background:rgba(34,197,94,0.1); color:#4ade80;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+                <div class="icon-box" style="background:rgba(34,197,94,0.1); color:#4ade80;"><i class="ph-duotone ph-lock-key" style="font-size:30px;"></i></div>
                 <h4>100% Locale</h4>
                 <p style="color:rgba(255,255,255,0.8);">Nessuna connessione internet necessaria durante il monitoraggio del sonno.</p>
             </div>
             <div class="hl-feature reveal reveal-delay-2">
-                <div class="icon-box" style="background:rgba(34,197,94,0.1); color:#4ade80;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+                <div class="icon-box" style="background:rgba(34,197,94,0.1); color:#4ade80;"><i class="ph-duotone ph-file-text" style="font-size:30px;"></i></div>
                 <h4>Conforme GDPR</h4>
                 <p style="color:rgba(255,255,255,0.8);">Esporta o elimina tutti i tuoi dati in qualsiasi momento. JSON &amp; CSV.</p>
             </div>
             <div class="hl-feature reveal reveal-delay-3">
-                <div class="icon-box" style="background:rgba(34,197,94,0.1); color:#4ade80;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                <div class="icon-box" style="background:rgba(34,197,94,0.1); color:#4ade80;"><i class="ph-duotone ph-shield" style="font-size:30px;"></i></div>
                 <h4>Zero pubblicit&agrave;</h4>
                 <p style="color:rgba(255,255,255,0.8);">Vendiamo un prodotto, non i tuoi dati.</p>
             </div>
@@ -295,22 +434,22 @@
         </div>
         <div class="integrations-grid reveal">
             <div class="integration-item">
-                <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="1" width="12" height="22" rx="2"/><circle cx="12" cy="18" r="1"/><path d="M8 4h8"/></svg>
+                <i class="ph-duotone ph-device-mobile" style="font-size:40px; margin-bottom:12px;"></i>
                 <span class="integration-name">Android 8.0+</span>
                 <span class="integration-desc">Qualsiasi telefono Android</span>
             </div>
             <div class="integration-item">
-                <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/><circle cx="12" cy="12" r="6" stroke-dasharray="2 2"/></svg>
+                <i class="ph-duotone ph-watch" style="font-size:40px; margin-bottom:12px;"></i>
                 <span class="integration-name">Wear OS</span>
                 <span class="integration-desc">Tile, complicazioni e frequenza cardiaca</span>
             </div>
             <div class="integration-item">
-                <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6 6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg>
+                <i class="ph-duotone ph-heartbeat" style="font-size:40px; margin-bottom:12px;"></i>
                 <span class="integration-name">Health Connect</span>
                 <span class="integration-desc">Sincronizza sonno e frequenza cardiaca</span>
             </div>
             <div class="integration-item">
-                <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                <i class="ph-duotone ph-activity" style="font-size:40px; margin-bottom:12px;"></i>
                 <span class="integration-name">Google Fit</span>
                 <span class="integration-desc">Dati di attivit&agrave; e benessere</span>
             </div>
@@ -345,10 +484,6 @@
                 <p>No. SleepWell &egrave; uno strumento di screening e monitoraggio, non un dispositivo medico. Se l'app o il test di apnea suggeriscono un rischio di apnea del sonno, consulta un professionista sanitario per una diagnosi corretta.</p>
             </details>
             <details class="faq-item">
-                <summary>Qual &egrave; la differenza tra Gratuito e Premium?</summary>
-                <p>Il piano Gratuito offre il rilevamento completo (russamento, posizione, sveglia intelligente, punteggio sonno). Il Premium sblocca le registrazioni audio, l'analisi dettagliata dell'apnea, gli approfondimenti su bruxismo e parlare nel sonno, l'identificazione "Chi Russa?", il coaching settimanale e l'esportazione dei dati.</p>
-            </details>
-            <details class="faq-item">
                 <summary>Dove devo posizionare il telefono?</summary>
                 <p>Sul comodino, entro 1 metro dalla testa. Si consiglia di tenerlo con lo schermo verso il basso per risparmiare batteria. Il microfono capta chiaramente i suoni da questa distanza.</p>
             </details>
@@ -375,16 +510,55 @@
         </div>
     </div>
 
-    <!-- Download CTA -->
-    <div class="highlight-section reveal" id="download" style="margin-bottom:0;">
-        <h2>Inizia a monitorare il tuo sonno stanotte</h2>
-        <p class="pricing-teaser reveal" style="text-align:center; max-width:640px; margin:28px auto 0; opacity:0.7; font-size:0.95rem; line-height:1.6; color:rgba(255,255,255,0.85);">Gratis da scaricare. Inizia stanotte, traccia ogni notte. Quando vuoi il quadro completo — analisi dettagliata, registrazioni audio, coach IA, report per il medico — Premium da 3,99€/mese. Nessun account, mai.</p>
-        <div style="margin-top:32px;">
-            <a href="https://play.google.com/store/apps/details?id=com.goodapps.sleepwell" target="_blank" rel="noopener" class="store-badge">
-                <img src="https://play.google.com/intl/it/badges/static/images/badges/it_badge_web_generic.png" alt="Disponibile su Google Play" height="40">
-            </a>
-        </div>
-        <p style="color:rgba(255,255,255,0.8); font-size:0.85rem; margin-top:20px;">Android 8.0+ &mdash; Wear OS supportato</p>
+    <!-- Beta signup -->
+    <div class="beta-signup reveal" id="beta-signup">
+        <span class="beta-eyebrow">Beta limitata &mdash; 100 posti</span>
+        <h2>Sii tra i primi a provare SleepWell</h2>
+        <p class="beta-tagline">La beta apre presto in Canada. Iscriviti ora per ottenere accesso anticipato e vantaggi a vita riservati ai nostri primi tester.</p>
+
+        <form class="beta-form" id="beta-form" action="https://13c53d86.sibforms.com/serve/MUIFAIjG3hnE-oSPj7QGaV9h3tE969IjpPA2ZDeDq7-Hs_pjAPmt1TU-YyvVMGSkQeBpGa6VQ5NHOGcGxUuwVMrOgYDp45SHJ7kZ1YLhAidbjmW3_TvUztrmapFN5QyVe8xUSkSy1xNNFqmfrabrA1yZgHyO6tlW6nO9VGMUmGkkQchMuKNmxUzZ9ckL3mOBIpnLOhgroSgfO-bWtg==" method="POST">
+            <div class="beta-form-row">
+                <input type="email" name="EMAIL" required placeholder="tua@email.com" aria-label="Email">
+                <select name="COUNTRY" required aria-label="Paese">
+                    <option value="">Paese&hellip;</option>
+                    <option value="CA">🇨🇦 Canada</option>
+                    <option value="FR">🇫🇷 France</option>
+                    <option value="BE">🇧🇪 Belgique</option>
+                    <option value="CH">🇨🇭 Suisse</option>
+                    <option value="OTHER">Altro</option>
+                </select>
+            </div>
+            <label class="beta-consent">
+                <input type="checkbox" required name="OPT_IN">
+                <span>Accetto di ricevere l'invito beta via email. No spam, disiscrizione in 1 clic.</span>
+            </label>
+            <input type="text" name="email_address_check" value="" style="display:none;" tabindex="-1" autocomplete="off">
+            <input type="hidden" name="locale" value="it">
+            <input type="hidden" name="html_type" value="simple">
+            <button type="submit" class="btn btn-primary beta-submit">Ottieni il mio accesso beta</button>
+        </form>
+        <div id="beta-success" class="beta-success" hidden>Grazie! Controlla la tua casella di posta per confermare l'iscrizione.</div>
+        <script>
+            (function () {
+                var form = document.getElementById('beta-form');
+                var success = document.getElementById('beta-success');
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    fetch(form.action, { method: 'POST', mode: 'no-cors', body: new FormData(form) }).finally(function () {
+                        form.hidden = true;
+                        success.hidden = false;
+                        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    });
+                });
+            })();
+        </script>
+
+        <p class="beta-perks">
+            <i class="ph-duotone ph-check-circle" style="font-size:14px; vertical-align:-2px;"></i> Accesso anticipato &middot;
+            <i class="ph-duotone ph-check-circle" style="font-size:14px; vertical-align:-2px;"></i> Vantaggi a vita per gli early tester &middot;
+            <i class="ph-duotone ph-check-circle" style="font-size:14px; vertical-align:-2px;"></i> Linea diretta con il fondatore
+        </p>
+        <p class="beta-android">Android 8.0+ &mdash; Wear OS supportato</p>
     </div>
 </section>
 
@@ -397,7 +571,7 @@
         </div>
         <div>
             <h4>Prodotto</h4>
-            <ul><li><a href="#features">Funzionalit&agrave;</a></li><li><a href="#who-snores">Chi Russa?</a></li><li><a href="https://play.google.com/store/apps/details?id=com.goodapps.sleepwell" target="_blank" rel="noopener">Scarica</a></li></ul>
+            <ul><li><a href="#features">Funzionalit&agrave;</a></li><li><a href="#who-snores">Chi Russa?</a></li><li><a href="#beta-signup">Unisciti alla beta</a></li></ul>
         </div>
         <div>
             <h4>Risorse</h4>

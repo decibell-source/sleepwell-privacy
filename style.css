@@ -762,3 +762,120 @@ img { max-width: 100%; height: auto; }
     .integrations-grid { gap: 8px; }
     .integration-item { padding: 16px 8px; }
 }
+
+/* ===== PHOSPHOR ICONS — color inheritance ===== */
+.feature-card__title i { color: var(--deep-secondary); flex-shrink: 0; opacity: 0.9; }
+.phase-morning .feature-card__title i { color: rgba(255, 255, 255, 0.7); }
+.integration-item i { color: var(--deep-secondary); }
+.step-icon i { line-height: 1; }
+.icon-box i { line-height: 1; }
+@media (max-width: 768px) {
+    .feature-card__title i { font-size: 18px !important; }
+}
+
+/* ===== BETA SIGNUP ===== */
+.beta-signup {
+    max-width: 640px;
+    margin: 80px auto;
+    padding: 48px 32px;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(192,132,252,0.08), rgba(129,140,248,0.10));
+    border: 1px solid rgba(192,132,252,0.18);
+    border-radius: 24px;
+    position: relative;
+}
+.beta-eyebrow {
+    display: inline-block;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(192,132,252,0.95);
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+.beta-signup h2 {
+    margin-bottom: 16px;
+}
+.beta-tagline {
+    color: rgba(255,255,255,0.85);
+    max-width: 520px;
+    margin: 0 auto 32px;
+    line-height: 1.6;
+}
+.beta-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 480px;
+    margin: 0 auto 20px;
+}
+.beta-form-row {
+    display: flex;
+    gap: 12px;
+}
+.beta-form-row > * {
+    flex: 1;
+    padding: 14px 16px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    color: white;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color 0.2s, background 0.2s;
+}
+.beta-form-row input::placeholder { color: rgba(255,255,255,0.40); }
+.beta-form-row input:focus,
+.beta-form-row select:focus {
+    outline: none;
+    border-color: rgba(192,132,252,0.6);
+    background: rgba(255,255,255,0.10);
+}
+.beta-form-row select { appearance: none; cursor: pointer; }
+.beta-consent {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.70);
+    text-align: left;
+    cursor: pointer;
+    line-height: 1.5;
+    padding: 4px 0;
+}
+.beta-consent input { margin-top: 3px; flex-shrink: 0; cursor: pointer; }
+.beta-submit {
+    margin-top: 4px;
+    width: 100%;
+    justify-content: center;
+}
+.beta-perks {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.65);
+    margin-top: 24px;
+    line-height: 1.8;
+}
+.beta-perks i { color: rgba(192,132,252,0.85); }
+.beta-android {
+    color: rgba(255,255,255,0.45);
+    font-size: 0.8rem;
+    margin-top: 16px;
+}
+.beta-success {
+    max-width: 480px;
+    margin: 24px auto 0;
+    padding: 18px 22px;
+    text-align: center;
+    background: rgba(74, 222, 128, 0.10);
+    border: 1px solid rgba(74, 222, 128, 0.30);
+    border-radius: 14px;
+    color: #86efac;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    .beta-form-row { flex-direction: column; }
+    .beta-signup { margin: 48px 16px; padding: 32px 20px; border-radius: 20px; }
+    .beta-perks { font-size: 0.78rem; }
+}

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#0A0E21">
     <title>SleepWell — Snoring Detection & Sleep Tracker App</title>
-    <meta name="description" content="Detect snoring, find out who snores in your couple, screen for sleep apnea, and improve your sleep. 6 audio detectors, smart alarm. Free on Android.">
+    <meta name="description" content="Detect snoring, find out who snores in your couple, screen for sleep apnea, and improve your sleep. 6 audio detectors, smart alarm. Beta opening soon on Android.">
     <meta name="keywords" content="snoring detection app, who snores, sleep apnea screening, snoring recorder, sleep tracker, smart alarm, do I snore, STOP-BANG">
     <meta property="og:title" content="SleepWell — Do You Snore? Find Out Tonight.">
     <meta property="og:description" content="The most complete sleep tracker on Android. 6 audio detectors, snoring analysis, apnea screening & smart alarm.">
@@ -15,9 +15,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
     <link rel="stylesheet" href="style.css">
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SleepWell","operatingSystem":"Android","applicationCategory":"HealthApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SleepWell","operatingSystem":"Android","applicationCategory":"HealthApplication"}
     </script>
     <meta property="og:image" content="https://joinsleepwell.com/og-image.png">
     <meta property="og:image:width" content="1200">
@@ -63,7 +64,7 @@
             <li><a href="blog/index.html">Blog</a></li>
             <li class="nav-lang"><a href="/" title="English"><strong>EN</strong></a> | <a href="/fr/" title="Français">FR</a> | <a href="/es/" title="Español">ES</a> | <a href="/de/" title="Deutsch">DE</a> | <a href="/it/" title="Italiano">IT</a></li>
         </ul>
-        <a href="https://play.google.com/store/apps/details?id=com.goodapps.sleepwell" target="_blank" rel="noopener" class="nav-cta">Download Free</a>
+        <a href="#beta-signup" class="nav-cta">Join Beta</a>
         <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">&#9776;</button>
     </div>
 </nav>
@@ -73,13 +74,12 @@
 <!-- ============================================ -->
 <section class="hero phase-section phase-deep-night" id="home" data-phase="deep-night">
     <div class="hero-content">
-        <span class="hero-badge">Free on Android &mdash; No account required</span>
+        <span class="hero-badge">Beta opens soon &mdash; Be among the first 100 testers</span>
         <h1>Do you snore?<br><span class="gradient">Find out tonight.</span></h1>
         <p>SleepWell listens while you sleep, detects snoring, and tells you everything in the morning. Find out who snores, check for sleep apnea signs, and wake up knowing more about your nights.</p>
         <div class="hero-ctas">
-            <a href="https://play.google.com/store/apps/details?id=com.goodapps.sleepwell" target="_blank" rel="noopener" class="store-badge">
-                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="40">
-            </a>
+            <a href="#beta-signup" class="btn btn-primary">Get early access</a>
+            <a href="#features" class="btn btn-secondary">See how it works</a>
         </div>
     </div>
 </section>
@@ -119,7 +119,7 @@
             <div class="step-card reveal reveal-delay-1">
                 <div class="step-number">1</div>
                 <div class="step-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                    <i class="ph-duotone ph-device-mobile" style="font-size:32px;"></i>
                 </div>
                 <h3>Place your phone</h3>
                 <p>On your nightstand, plugged in. Face down to save battery.</p>
@@ -127,7 +127,7 @@
             <div class="step-card reveal reveal-delay-2">
                 <div class="step-number">2</div>
                 <div class="step-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/><path d="M19 3v4"/><path d="M21 5h-4"/></svg>
+                    <i class="ph-duotone ph-moon" style="font-size:32px;"></i>
                 </div>
                 <h3>Sleep normally</h3>
                 <p>6 detectors analyze audio all night. No wearable needed.</p>
@@ -135,7 +135,7 @@
             <div class="step-card reveal reveal-delay-3">
                 <div class="step-number">3</div>
                 <div class="step-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    <i class="ph-duotone ph-chart-line-up" style="font-size:32px;"></i>
                 </div>
                 <h3>Wake up to insights</h3>
                 <p>Sleep score, snoring timeline, apnea events, position &mdash; all in one morning report.</p>
@@ -177,14 +177,11 @@
                             <rect x="52" y="137" width="6" height="18" rx="3" fill="url(#snore-bar-grad)"/><rect x="64" y="123" width="6" height="32" rx="3" fill="url(#snore-bar-grad)"/><rect x="76" y="133" width="6" height="22" rx="3" fill="url(#snore-bar-grad)"/><rect x="88" y="117" width="6" height="38" rx="3" fill="url(#snore-bar-grad)"/><rect x="100" y="127" width="6" height="28" rx="3" fill="url(#snore-bar-grad)"/><rect x="112" y="110" width="6" height="45" rx="3" fill="url(#snore-bar-grad)"/><rect x="124" y="120" width="6" height="35" rx="3" fill="url(#snore-bar-grad)"/><rect x="136" y="103" width="6" height="52" rx="3" fill="url(#snore-bar-grad)"/><rect x="148" y="95" width="6" height="60" rx="3" fill="url(#snore-bar-grad)"/><rect x="160" y="83" width="6" height="72" rx="3" fill="url(#snore-bar-grad)"/><rect x="172" y="90" width="6" height="65" rx="3" fill="url(#snore-bar-grad)"/><rect x="184" y="75" width="6" height="80" rx="3" fill="url(#snore-bar-grad)"/><rect x="196" y="80" width="6" height="75" rx="3" fill="url(#snore-bar-grad)"/><rect x="208" y="85" width="6" height="70" rx="3" fill="url(#snore-bar-grad)"/><rect x="220" y="97" width="6" height="58" rx="3" fill="url(#snore-bar-grad)"/><rect x="232" y="107" width="6" height="40" rx="3" fill="url(#snore-bar-grad)"/><rect x="244" y="115" width="6" height="40" rx="3" fill="url(#snore-bar-grad)"/><rect x="256" y="105" width="6" height="50" rx="3" fill="url(#snore-bar-grad)"/><rect x="268" y="120" width="6" height="35" rx="3" fill="url(#snore-bar-grad)"/><rect x="280" y="113" width="6" height="42" rx="3" fill="url(#snore-bar-grad)"/><rect x="292" y="125" width="6" height="30" rx="3" fill="url(#snore-bar-grad)"/><rect x="304" y="130" width="6" height="25" rx="3" fill="url(#snore-bar-grad)"/><rect x="316" y="123" width="6" height="32" rx="3" fill="url(#snore-bar-grad)"/><rect x="328" y="135" width="6" height="20" rx="3" fill="url(#snore-bar-grad)"/><rect x="340" y="140" width="6" height="15" rx="3" fill="url(#snore-bar-grad)"/>
                         </g>
                         <circle cx="187" cy="74" r="2" fill="#e0b3ff" opacity="0.8"/><circle cx="163" cy="82" r="2" fill="#e0b3ff" opacity="0.7"/><circle cx="199" cy="79" r="2" fill="#e0b3ff" opacity="0.7"/>
-                        <line x1="50" y1="155" x2="350" y2="155" stroke="#818cf8" stroke-width="0.5" opacity="0.15"/>
-                        <text x="42" y="158" text-anchor="end" fill="#818cf8" font-size="6" opacity="0.25" font-family="monospace">0Hz</text>
-                        <text x="42" y="128" text-anchor="end" fill="#818cf8" font-size="6" opacity="0.2" font-family="monospace">500</text>
                     </svg>
                 </div>
                 <div class="feature-card__content">
                     <h3 class="feature-card__title">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10v3"/><path d="M6 6v11"/><path d="M10 3v18"/><path d="M14 8v7"/><path d="M18 5v13"/><path d="M22 10v3"/></svg>
+                        <i class="ph-duotone ph-waveform" style="font-size:20px;"></i>
                         Snoring Detection
                     </h3>
                     <p class="feature-card__description">AI-powered audio analysis distinguishes real snoring from background noise. Tracks intensity, duration, and frequency every night.</p>
@@ -203,26 +200,17 @@
                                 <stop offset="100%" stop-color="#FF8C42" stop-opacity="0"/>
                             </radialGradient>
                         </defs>
-                        <g opacity="0.06"><line x1="0" y1="20" x2="400" y2="20" stroke="#E8976B" stroke-width="0.5"/><line x1="0" y1="40" x2="400" y2="40" stroke="#E8976B" stroke-width="0.5"/><line x1="0" y1="60" x2="400" y2="60" stroke="#E8976B" stroke-width="0.5"/><line x1="0" y1="80" x2="400" y2="80" stroke="#E8976B" stroke-width="0.5"/><line x1="0" y1="100" x2="400" y2="100" stroke="#E8976B" stroke-width="0.5"/><line x1="0" y1="120" x2="400" y2="120" stroke="#E8976B" stroke-width="0.5"/><line x1="0" y1="140" x2="400" y2="140" stroke="#E8976B" stroke-width="0.5"/><line x1="0" y1="160" x2="400" y2="160" stroke="#E8976B" stroke-width="0.5"/><line x1="0" y1="180" x2="400" y2="180" stroke="#E8976B" stroke-width="0.5"/><line x1="20" y1="0" x2="20" y2="200" stroke="#E8976B" stroke-width="0.5"/><line x1="40" y1="0" x2="40" y2="200" stroke="#E8976B" stroke-width="0.5"/><line x1="60" y1="0" x2="60" y2="200" stroke="#E8976B" stroke-width="0.5"/><line x1="80" y1="0" x2="80" y2="200" stroke="#E8976B" stroke-width="0.5"/><line x1="100" y1="0" x2="100" y2="200" stroke="#E8976B" stroke-width="0.5"/><line x1="120" y1="0" x2="120" y2="200" stroke="#E8976B" stroke-width="0.5"/><line x1="140" y1="0" x2="140" y2="200" stroke="#E8976B" stroke-width="0.5"/><line x1="160" y1="0" x2="160" y2="200" stroke="#E8976B" stroke-width="0.5"/><line x1="180" y1="0" x2="180" y2="200" stroke="#E8976B" stroke-width="0.5"/><line x1="200" y1="0" x2="200" y2="200" stroke="#E8976B" stroke-width="0.5"/><line x1="220" y1="0" x2="220" y2="200" stroke="#E8976B" stroke-width="0.5"/><line x1="240" y1="0" x2="240" y2="200" stroke="#E8976B" stroke-width="0.5"/><line x1="260" y1="0" x2="260" y2="200" stroke="#E8976B" stroke-width="0.5"/><line x1="280" y1="0" x2="280" y2="200" stroke="#E8976B" stroke-width="0.5"/><line x1="300" y1="0" x2="300" y2="200" stroke="#E8976B" stroke-width="0.5"/><line x1="320" y1="0" x2="320" y2="200" stroke="#E8976B" stroke-width="0.5"/><line x1="340" y1="0" x2="340" y2="200" stroke="#E8976B" stroke-width="0.5"/><line x1="360" y1="0" x2="360" y2="200" stroke="#E8976B" stroke-width="0.5"/><line x1="380" y1="0" x2="380" y2="200" stroke="#E8976B" stroke-width="0.5"/></g>
-                        <g opacity="0.1"><line x1="0" y1="100" x2="400" y2="100" stroke="#E8976B" stroke-width="1"/><line x1="100" y1="0" x2="100" y2="200" stroke="#E8976B" stroke-width="0.8"/><line x1="200" y1="0" x2="200" y2="200" stroke="#E8976B" stroke-width="0.8"/><line x1="300" y1="0" x2="300" y2="200" stroke="#E8976B" stroke-width="0.8"/></g>
                         <g filter="url(#apnea-glow)">
                             <path d="M10,105 L30,105 L35,102 Q38,100 40,105 L42,105 L44,108 L46,50 L49,140 L52,95 L55,105 L60,108 Q63,110 66,105 L80,105 L90,105 L95,102 Q98,100 100,105 L102,105 L104,108 L106,50 L109,140 L112,95 L115,105 L120,108 Q123,110 126,105 L140,105" fill="none" stroke="#E8976B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M140,105 L250,105" fill="none" stroke="#E8976B" stroke-width="2" stroke-linecap="round" opacity="0.5" stroke-dasharray="1 3"/>
                             <path d="M250,105 L255,105 L257,108 L259,60 L262,135 L265,98 L268,105 L273,108 Q276,110 278,105 L290,105 L295,102 Q298,100 300,105 L302,105 L304,107 L306,55 L309,138 L312,96 L315,105 L320,108 Q323,110 326,105 L345,105 L350,102 Q353,100 355,105 L357,105 L359,107 L361,52 L364,138 L367,96 L370,105 L375,108 Q378,110 380,105 L395,105" fill="none" stroke="#FF8C42" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </g>
-                        <rect x="140" y="30" width="110" height="140" rx="4" fill="#FF8C42" opacity="0.04"/>
-                        <line x1="140" y1="30" x2="140" y2="170" stroke="#FF8C42" stroke-width="0.8" opacity="0.15" stroke-dasharray="4 4"/>
-                        <line x1="250" y1="30" x2="250" y2="170" stroke="#FF8C42" stroke-width="0.8" opacity="0.15" stroke-dasharray="4 4"/>
-                        <rect x="168" y="72" width="64" height="18" rx="9" fill="#FF8C42" opacity="0.1"/>
-                        <text x="200" y="84" text-anchor="middle" fill="#FF8C42" font-size="9" opacity="0.6" font-family="monospace" font-weight="bold">PAUSE 12s</text>
                         <circle cx="380" cy="105" r="12" fill="url(#pulse-glow)"/><circle cx="380" cy="105" r="4" fill="#FF8C42" opacity="0.9"/><circle cx="380" cy="105" r="6" fill="none" stroke="#FF8C42" stroke-width="1" opacity="0.4"/>
-                        <text x="375" y="25" text-anchor="end" fill="#E8976B" font-size="10" opacity="0.35" font-family="monospace">72 BPM</text>
-                        <text x="375" y="38" text-anchor="end" fill="#FF8C42" font-size="7" opacity="0.25" font-family="monospace">SpO2 94%</text>
                     </svg>
                 </div>
                 <div class="feature-card__content">
                     <h3 class="feature-card__title">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <i class="ph-duotone ph-shield-check" style="font-size:20px;"></i>
                         Sleep Apnea Screening
                     </h3>
                     <p class="feature-card__description">Detects breathing pauses over 10 seconds and rates severity. Even better with a Wear OS watch for heart rate fusion.</p>
@@ -244,14 +232,11 @@
                         <circle cx="130" cy="90" r="3" fill="#a855f7" opacity="0.15"/><circle cx="120" cy="105" r="2.5" fill="#a855f7" opacity="0.12"/><circle cx="140" cy="75" r="2.5" fill="#c084fc" opacity="0.13"/><circle cx="260" cy="92" r="3" fill="#a855f7" opacity="0.14"/><circle cx="265" cy="108" r="2.5" fill="#a855f7" opacity="0.12"/><circle cx="255" cy="80" r="2" fill="#c084fc" opacity="0.1"/><circle cx="160" cy="125" r="2.5" fill="#a855f7" opacity="0.12"/><circle cx="245" cy="120" r="2" fill="#a855f7" opacity="0.1"/>
                         <circle cx="85" cy="95" r="1.5" fill="#a855f7" opacity="0.04"/><circle cx="295" cy="100" r="1.5" fill="#a855f7" opacity="0.04"/><circle cx="310" cy="95" r="1" fill="#a855f7" opacity="0.03"/>
                         <path d="M140,55 Q155,50 200,48 Q245,50 260,55 Q275,70 278,95 Q275,125 260,140 Q240,155 200,160 Q160,155 140,140 Q125,125 122,95 Q125,70 140,55Z" fill="none" stroke="#c084fc" stroke-width="1" opacity="0.1"/>
-                        <circle cx="330" cy="75" r="6" fill="#c084fc" opacity="0.5"/><text x="342" y="78" fill="#c084fc" font-size="7" opacity="0.3" font-family="sans-serif">High</text>
-                        <circle cx="330" cy="95" r="4" fill="#a855f7" opacity="0.3"/><text x="342" y="98" fill="#a855f7" font-size="7" opacity="0.25" font-family="sans-serif">Med</text>
-                        <circle cx="330" cy="115" r="2.5" fill="#a855f7" opacity="0.15"/><text x="342" y="118" fill="#a855f7" font-size="7" opacity="0.2" font-family="sans-serif">Low</text>
                     </svg>
                 </div>
                 <div class="feature-card__content">
                     <h3 class="feature-card__title">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                        <i class="ph-duotone ph-tooth" style="font-size:20px;"></i>
                         Bruxism Detection
                     </h3>
                     <p class="feature-card__description">Detects teeth grinding while you sleep. Tracks episodes, duration, and intensity so you can share data with your dentist.</p>
@@ -268,7 +253,6 @@
                         </defs>
                         <rect x="30" y="178" width="340" height="2" rx="1" fill="#818cf8" opacity="0.1"/>
                         <rect x="30" y="178" width="210" height="2" rx="1" fill="#60a5fa" opacity="0.4"/>
-                        <text x="30" y="195" fill="#60a5fa" font-size="7" opacity="0.3" font-family="monospace">0:00</text><text x="115" y="195" fill="#60a5fa" font-size="7" opacity="0.25" font-family="monospace">0:05</text><text x="200" y="195" fill="#60a5fa" font-size="7" opacity="0.25" font-family="monospace">0:10</text><text x="285" y="195" fill="#60a5fa" font-size="7" opacity="0.2" font-family="monospace">0:15</text><text x="355" y="195" fill="#60a5fa" font-size="7" opacity="0.2" font-family="monospace">0:18</text>
                         <g clip-path="url(#played-clip)">
                             <path d="M30,95 L35,92 L38,88 L42,80 L45,72 L48,78 L52,85 L55,90 L58,88 L62,75 L65,62 L68,55 L72,60 L75,70 L78,82 L82,88 L85,91 L88,86 L92,70 L95,58 L98,48 L102,42 L105,50 L108,62 L112,72 L115,80 L118,88 L122,92 L125,94 L128,90 L132,82 L135,70 L138,58 L142,50 L145,55 L148,65 L152,75 L155,82 L158,88 L162,92 L165,94 L168,91 L172,85 L175,75 L178,60 L182,48 L185,40 L188,35 L192,40 L195,52 L198,65 L202,75 L205,82 L208,88 L212,92 L215,94 L218,91 L222,82 L225,70 L228,60 L232,68 L235,78 L238,88 L240,92" fill="url(#wave-fill-top)" stroke="#818cf8" stroke-width="1.5"/>
                             <path d="M30,105 L35,108 L38,112 L42,120 L45,128 L48,122 L52,115 L55,110 L58,112 L62,125 L65,138 L68,145 L72,140 L75,130 L78,118 L82,112 L85,109 L88,114 L92,130 L95,142 L98,152 L102,158 L105,150 L108,138 L112,128 L115,120 L118,112 L122,108 L125,106 L128,110 L132,118 L135,130 L138,142 L142,150 L145,145 L148,135 L152,125 L155,118 L158,112 L162,108 L165,106 L168,109 L172,115 L175,125 L178,140 L182,152 L185,160 L188,165 L192,160 L195,148 L198,135 L202,125 L205,118 L208,112 L212,108 L215,106 L218,109 L222,118 L225,130 L228,140 L232,132 L235,122 L238,112 L240,108" fill="url(#wave-fill-bot)" stroke="#818cf8" stroke-width="1.5"/>
@@ -279,14 +263,11 @@
                         </g>
                         <line x1="240" y1="30" x2="240" y2="175" stroke="#60a5fa" stroke-width="1.5" opacity="0.6"/>
                         <circle cx="240" cy="179" r="5" fill="#60a5fa" opacity="0.8"/>
-                        <rect x="90" y="26" width="40" height="14" rx="7" fill="#818cf8" opacity="0.12"/><text x="110" y="36" text-anchor="middle" fill="#818cf8" font-size="7" opacity="0.45" font-family="sans-serif">speech</text>
-                        <rect x="175" y="26" width="48" height="14" rx="7" fill="#818cf8" opacity="0.12"/><text x="199" y="36" text-anchor="middle" fill="#818cf8" font-size="7" opacity="0.45" font-family="sans-serif">mumble</text>
-                        <text x="240" y="22" text-anchor="middle" fill="#60a5fa" font-size="8" opacity="0.5" font-family="monospace">03:24 AM</text>
                     </svg>
                 </div>
                 <div class="feature-card__content">
                     <h3 class="feature-card__title">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                        <i class="ph-duotone ph-microphone" style="font-size:20px;"></i>
                         Sleep Talk Recorder
                     </h3>
                     <p class="feature-card__description">Records what you say in your sleep. Play back your funniest — or most mysterious — nighttime conversations.</p>
@@ -312,25 +293,15 @@
                         <path d="M253,55 A85,85 0 0,1 253,145" fill="none" stroke="#4ade80" stroke-width="12" opacity="0.2" stroke-linecap="round"/>
                         <path d="M97,55 A85,85 0 0,0 97,145" fill="none" stroke="#4ade80" stroke-width="12" opacity="0.2" stroke-linecap="round"/>
                         <path d="M97,145 A85,85 0 0,0 253,145" fill="none" stroke="#E8976B" stroke-width="5" opacity="0.12" stroke-linecap="round"/>
-                        <text x="175" y="25" text-anchor="middle" fill="#818cf8" font-size="8" opacity="0.4" font-family="sans-serif" font-weight="bold">BACK</text>
-                        <text x="270" y="103" text-anchor="start" fill="#4ade80" font-size="8" opacity="0.5" font-family="sans-serif" font-weight="bold">SIDE</text>
-                        <text x="80" y="103" text-anchor="end" fill="#4ade80" font-size="8" opacity="0.5" font-family="sans-serif" font-weight="bold">SIDE</text>
-                        <text x="175" y="195" text-anchor="middle" fill="#E8976B" font-size="7" opacity="0.3" font-family="sans-serif">STOMACH</text>
                         <path d="M145,50 Q130,60 135,80 Q140,95 155,90 Q170,85 165,70 Q160,55 175,60 Q190,65 200,80 Q210,95 195,105 Q180,115 170,100 Q160,85 170,75 Q180,65 190,72 Q200,80 195,90" fill="none" stroke="url(#trail-grad)" stroke-width="2" stroke-linecap="round"/>
                         <circle cx="145" cy="50" r="1.5" fill="#818cf8" opacity="0.2"/><circle cx="135" cy="80" r="1.5" fill="#4ade80" opacity="0.25"/><circle cx="155" cy="90" r="2" fill="#4ade80" opacity="0.3"/><circle cx="175" cy="60" r="2" fill="#818cf8" opacity="0.35"/><circle cx="200" cy="80" r="2" fill="#4ade80" opacity="0.4"/><circle cx="195" cy="105" r="2.5" fill="#4ade80" opacity="0.5"/><circle cx="170" cy="100" r="2.5" fill="#4ade80" opacity="0.55"/>
                         <g filter="url(#pos-glow)"><circle cx="195" cy="90" r="6" fill="#4ade80" opacity="0.5"/></g>
                         <circle cx="195" cy="90" r="4" fill="#4ade80" opacity="0.9"/><circle cx="195" cy="90" r="7" fill="none" stroke="#4ade80" stroke-width="1" opacity="0.3"/>
-                        <g transform="translate(300, 40)">
-                            <rect x="0" y="0" width="80" height="120" rx="8" fill="#4ade80" opacity="0.04" stroke="#4ade80" stroke-width="0.5" stroke-opacity="0.08"/>
-                            <rect x="12" y="14" width="36" height="6" rx="3" fill="#4ade80" opacity="0.4"/><text x="12" y="32" fill="#4ade80" font-size="7" opacity="0.5" font-family="sans-serif">Side 62%</text>
-                            <rect x="12" y="48" width="22" height="6" rx="3" fill="#818cf8" opacity="0.3"/><text x="12" y="66" fill="#818cf8" font-size="7" opacity="0.4" font-family="sans-serif">Back 28%</text>
-                            <rect x="12" y="82" width="8" height="6" rx="3" fill="#E8976B" opacity="0.25"/><text x="12" y="100" fill="#E8976B" font-size="7" opacity="0.35" font-family="sans-serif">Stom. 10%</text>
-                        </g>
                     </svg>
                 </div>
                 <div class="feature-card__content">
                     <h3 class="feature-card__title">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14"/><path d="M2 20h20"/><path d="M14 12h.01"/></svg>
+                        <i class="ph-duotone ph-bed" style="font-size:20px;"></i>
                         Position Tracking
                     </h3>
                     <p class="feature-card__description">Knows if you sleep on your back, side, or stomach. See how your position affects your snoring — you might be surprised.</p>
@@ -349,13 +320,7 @@
                         </defs>
                         <rect x="280" y="0" width="120" height="200" fill="url(#sunrise-grad)"/>
                         <circle cx="400" cy="160" r="80" fill="url(#sun-glow)"/>
-                        <text x="22" y="48" text-anchor="end" fill="#FFB347" font-size="7" opacity="0.35" font-family="sans-serif">Awake</text><text x="22" y="78" text-anchor="end" fill="#c084fc" font-size="7" opacity="0.3" font-family="sans-serif">REM</text><text x="22" y="108" text-anchor="end" fill="#818cf8" font-size="7" opacity="0.25" font-family="sans-serif">Light</text><text x="22" y="148" text-anchor="end" fill="#818cf8" font-size="7" opacity="0.2" font-family="sans-serif">Deep</text>
-                        <line x1="30" y1="45" x2="380" y2="45" stroke="#FFB347" stroke-width="0.3" opacity="0.1"/><line x1="30" y1="75" x2="380" y2="75" stroke="#c084fc" stroke-width="0.3" opacity="0.08"/><line x1="30" y1="105" x2="380" y2="105" stroke="#818cf8" stroke-width="0.3" opacity="0.06"/><line x1="30" y1="145" x2="380" y2="145" stroke="#818cf8" stroke-width="0.3" opacity="0.05"/>
-                        <line x1="30" y1="170" x2="380" y2="170" stroke="#818cf8" stroke-width="0.5" opacity="0.1"/>
-                        <text x="30" y="183" fill="#818cf8" font-size="7" opacity="0.2" font-family="monospace">23:00</text><text x="100" y="183" fill="#818cf8" font-size="7" opacity="0.2" font-family="monospace">0:00</text><text x="170" y="183" fill="#818cf8" font-size="7" opacity="0.2" font-family="monospace">2:00</text><text x="240" y="183" fill="#818cf8" font-size="7" opacity="0.2" font-family="monospace">4:00</text><text x="310" y="183" fill="#FFB347" font-size="7" opacity="0.3" font-family="monospace">6:00</text><text x="365" y="183" fill="#FFB347" font-size="7" opacity="0.35" font-family="monospace">7:00</text>
                         <rect x="310" y="30" width="55" height="140" rx="4" fill="url(#wake-zone)"/>
-                        <line x1="310" y1="30" x2="310" y2="170" stroke="#FFB347" stroke-width="0.8" opacity="0.2" stroke-dasharray="4 3"/><line x1="365" y1="30" x2="365" y2="170" stroke="#FFB347" stroke-width="0.8" opacity="0.2" stroke-dasharray="4 3"/>
-                        <rect x="316" y="32" width="44" height="14" rx="7" fill="#FFB347" opacity="0.12"/><text x="338" y="42" text-anchor="middle" fill="#FFB347" font-size="7" opacity="0.5" font-family="sans-serif" font-weight="bold">WAKE</text>
                         <path d="M30,45 L30,105 L50,105 L55,145 L75,145 L80,140 L100,145 L105,105 L115,75 L130,75 L135,105 L155,105 L160,145 L180,145 L185,140 L195,145 L200,105 L210,75 L225,75 L228,45 L232,75 L245,105 L260,105 L265,145 L280,145 L285,105 L300,105 L305,75 L315,75 L320,105 L330,105 L340,75 L345,45 L350,45 L380,45" fill="url(#hypno-fill)"/>
                         <g filter="url(#alarm-glow)"><path d="M30,105 L50,105 L55,145 L75,145 L80,140 L100,145 L105,105 L115,75 L130,75 L135,105 L155,105 L160,145 L180,145 L185,140 L195,145 L200,105 L210,75 L225,75 L228,45 L232,75 L245,105 L260,105 L265,145 L280,145 L285,105 L300,105 L305,75 L315,75 L320,105 L330,105 L340,75 L345,45" fill="none" stroke="url(#hypno-grad)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/></g>
                         <path d="M30,105 L50,105 L55,145 L75,145 L80,140 L100,145 L105,105 L115,75 L130,75 L135,105 L155,105 L160,145 L180,145 L185,140 L195,145 L200,105 L210,75 L225,75 L228,45 L232,75 L245,105 L260,105 L265,145 L280,145 L285,105 L300,105 L305,75 L315,75 L320,105 L330,105 L340,75 L345,45" fill="none" stroke="url(#hypno-grad)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" opacity="0.1"/>
@@ -367,7 +332,7 @@
                 </div>
                 <div class="feature-card__content">
                     <h3 class="feature-card__title">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <i class="ph-duotone ph-alarm" style="font-size:20px;"></i>
                         Smart Alarm
                     </h3>
                     <p class="feature-card__description">Wakes you during your lightest sleep phase within a customizable window. No more groggy mornings.</p>
@@ -390,28 +355,28 @@
         <div class="hl-features">
             <div class="hl-feature reveal reveal-delay-1">
                 <div class="icon-box" style="background:rgba(255,255,255,0.12); color:#FFFFFF;">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2z"/></svg>
+                    <i class="ph-duotone ph-brain" style="font-size:30px;"></i>
                 </div>
                 <h4>AI-Powered</h4>
                 <p style="color:rgba(255,255,255,0.85);">The app creates a unique voice profile for each person in the room, like a fingerprint for snoring.</p>
             </div>
             <div class="hl-feature reveal reveal-delay-2">
                 <div class="icon-box" style="background:rgba(255,255,255,0.12); color:#FFFFFF;">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                    <i class="ph-duotone ph-moon-stars" style="font-size:30px;"></i>
                 </div>
                 <h4>3 Nights to Learn</h4>
                 <p style="color:rgba(255,255,255,0.85);">After 3 nights of data, SleepWell can attribute each snoring episode to the right person.</p>
             </div>
             <div class="hl-feature reveal reveal-delay-3">
                 <div class="icon-box" style="background:rgba(255,255,255,0.12); color:#FFFFFF;">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+                    <i class="ph-duotone ph-chart-pie-slice" style="font-size:30px;"></i>
                 </div>
                 <h4>Attribution Pie</h4>
                 <p style="color:rgba(255,255,255,0.85);">"You: 73%. Your partner: 27%." See the breakdown with intensity details.</p>
             </div>
         </div>
         <div style="text-align:center; margin-top:40px;">
-            <a href="https://play.google.com/store/apps/details?id=com.goodapps.sleepwell" target="_blank" rel="noopener" class="btn btn-primary">Try "Who Snores?" Free</a>
+            <a href="#beta-signup" class="btn btn-primary">Get early access</a>
         </div>
     </div>
 </section>
@@ -440,7 +405,7 @@
                 <svg viewBox="0 0 120 120" width="160" height="160"><circle cx="60" cy="60" r="52" fill="none" stroke="rgba(123,104,238,0.15)" stroke-width="8"/><circle cx="60" cy="60" r="52" fill="none" stroke="url(#rg-night)" stroke-width="8" stroke-linecap="round" stroke-dasharray="327" stroke-dashoffset="327" id="snore-ring-progress" transform="rotate(-90 60 60)"/><defs><linearGradient id="rg-night" x1="0%" y1="0%" x2="100%"><stop offset="0%" stop-color="#818cf8"/><stop offset="100%" stop-color="#c084fc"/></linearGradient></defs><text x="60" y="55" text-anchor="middle" fill="var(--deep-text)" font-size="28" font-weight="800" id="snore-score-text">0</text><text x="60" y="75" text-anchor="middle" fill="var(--deep-muted)" font-size="11">/ 18</text></svg>
                 <h3 id="snore-result-title" style="font-size:1.4rem; margin:20px 0 8px;"></h3>
                 <p id="snore-result-desc" style="opacity:0.7; max-width:500px; margin:0 auto 24px;"></p>
-                <a href="https://play.google.com/store/apps/details?id=com.goodapps.sleepwell" target="_blank" rel="noopener" class="btn btn-primary">Record Your Snoring Tonight</a>
+                <a href="#beta-signup" class="btn btn-primary">Get beta access</a>
                 <button class="btn btn-secondary" style="margin-left:12px;" onclick="resetQuiz('snore')">Retake</button>
             </div>
         </div>
@@ -458,17 +423,17 @@
         <p style="color:rgba(255,255,255,0.8);">No cloud. No account. No ads. Ever. All processing happens locally on your device.</p>
         <div class="hl-features">
             <div class="hl-feature reveal reveal-delay-1">
-                <div class="icon-box" style="background:rgba(34,197,94,0.1); color:#4ade80;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+                <div class="icon-box" style="background:rgba(34,197,94,0.1); color:#4ade80;"><i class="ph-duotone ph-lock-key" style="font-size:30px;"></i></div>
                 <h4>100% Local</h4>
                 <p style="color:rgba(255,255,255,0.8);">No internet required during sleep monitoring.</p>
             </div>
             <div class="hl-feature reveal reveal-delay-2">
-                <div class="icon-box" style="background:rgba(34,197,94,0.1); color:#4ade80;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+                <div class="icon-box" style="background:rgba(34,197,94,0.1); color:#4ade80;"><i class="ph-duotone ph-file-text" style="font-size:30px;"></i></div>
                 <h4>GDPR Compliant</h4>
                 <p style="color:rgba(255,255,255,0.8);">Export or delete all data anytime. JSON &amp; CSV.</p>
             </div>
             <div class="hl-feature reveal reveal-delay-3">
-                <div class="icon-box" style="background:rgba(34,197,94,0.1); color:#4ade80;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                <div class="icon-box" style="background:rgba(34,197,94,0.1); color:#4ade80;"><i class="ph-duotone ph-shield" style="font-size:30px;"></i></div>
                 <h4>Zero Ads</h4>
                 <p style="color:rgba(255,255,255,0.8);">We sell a product, not your data.</p>
             </div>
@@ -483,22 +448,22 @@
         </div>
         <div class="integrations-grid reveal">
             <div class="integration-item">
-                <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="1" width="12" height="22" rx="2"/><circle cx="12" cy="18" r="1"/><path d="M8 4h8"/></svg>
+                <i class="ph-duotone ph-device-mobile" style="font-size:40px; margin-bottom:12px;"></i>
                 <span class="integration-name">Android 8.0+</span>
                 <span class="integration-desc">Any Android phone</span>
             </div>
             <div class="integration-item">
-                <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/><circle cx="12" cy="12" r="6" stroke-dasharray="2 2"/></svg>
+                <i class="ph-duotone ph-watch" style="font-size:40px; margin-bottom:12px;"></i>
                 <span class="integration-name">Wear OS</span>
                 <span class="integration-desc">Tiles, complications &amp; heart rate</span>
             </div>
             <div class="integration-item">
-                <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6 6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg>
+                <i class="ph-duotone ph-heartbeat" style="font-size:40px; margin-bottom:12px;"></i>
                 <span class="integration-name">Health Connect</span>
                 <span class="integration-desc">Sync sleep &amp; heart rate data</span>
             </div>
             <div class="integration-item">
-                <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                <i class="ph-duotone ph-activity" style="font-size:40px; margin-bottom:12px;"></i>
                 <span class="integration-name">Google Fit</span>
                 <span class="integration-desc">Activity &amp; wellness data</span>
             </div>
@@ -533,10 +498,6 @@
                 <p>No. SleepWell is a screening and tracking tool, not a medical device. If the app or the STOP-BANG test suggests sleep apnea risk, consult a healthcare professional for a proper diagnosis.</p>
             </details>
             <details class="faq-item">
-                <summary>What's the difference between Free and Premium?</summary>
-                <p>Free gives you full detection (snoring, position, smart alarm, sleep score). Premium unlocks audio recordings, detailed apnea analysis, bruxism &amp; sleep talk insights, "Who Snores?" identification, weekly coaching, and data export.</p>
-            </details>
-            <details class="faq-item">
                 <summary>Where should I place my phone?</summary>
                 <p>On your nightstand, within 1 meter of your head. Face down is recommended to save battery. The microphone picks up sounds clearly from this distance.</p>
             </details>
@@ -563,16 +524,55 @@
         </div>
     </div>
 
-    <!-- Download CTA -->
-    <div class="highlight-section reveal" id="download" style="margin-bottom:0;">
-        <h2>Start tracking your sleep tonight</h2>
-        <p class="pricing-teaser reveal" style="text-align:center; max-width:640px; margin:28px auto 0; opacity:0.7; font-size:0.95rem; line-height:1.6; color:rgba(255,255,255,0.85);">Free to download. Start tonight, track every night. When you want the full picture — detailed analysis, audio recordings, AI coaching, doctor-ready reports — Premium starts at €3.99/month. No account required, ever.</p>
-        <div style="margin-top:32px;">
-            <a href="https://play.google.com/store/apps/details?id=com.goodapps.sleepwell" target="_blank" rel="noopener" class="store-badge">
-                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="40">
-            </a>
-        </div>
-        <p style="color:rgba(255,255,255,0.8); font-size:0.85rem; margin-top:20px;">Android 8.0+ &mdash; Wear OS supported</p>
+    <!-- Beta signup -->
+    <div class="beta-signup reveal" id="beta-signup">
+        <span class="beta-eyebrow">Limited beta &mdash; 100 spots</span>
+        <h2>Be among the first to try SleepWell</h2>
+        <p class="beta-tagline">Beta opens soon in Canada. Sign up now to get early access and lifetime perks reserved for our first testers.</p>
+
+        <form class="beta-form" id="beta-form" action="https://13c53d86.sibforms.com/serve/MUIFAIjG3hnE-oSPj7QGaV9h3tE969IjpPA2ZDeDq7-Hs_pjAPmt1TU-YyvVMGSkQeBpGa6VQ5NHOGcGxUuwVMrOgYDp45SHJ7kZ1YLhAidbjmW3_TvUztrmapFN5QyVe8xUSkSy1xNNFqmfrabrA1yZgHyO6tlW6nO9VGMUmGkkQchMuKNmxUzZ9ckL3mOBIpnLOhgroSgfO-bWtg==" method="POST">
+            <div class="beta-form-row">
+                <input type="email" name="EMAIL" required placeholder="your@email.com" aria-label="Email">
+                <select name="COUNTRY" required aria-label="Country">
+                    <option value="">Country&hellip;</option>
+                    <option value="CA">🇨🇦 Canada</option>
+                    <option value="FR">🇫🇷 France</option>
+                    <option value="BE">🇧🇪 Belgium</option>
+                    <option value="CH">🇨🇭 Switzerland</option>
+                    <option value="OTHER">Other</option>
+                </select>
+            </div>
+            <label class="beta-consent">
+                <input type="checkbox" required name="OPT_IN">
+                <span>I agree to receive the beta invitation by email. No spam, 1-click unsubscribe.</span>
+            </label>
+            <input type="text" name="email_address_check" value="" style="display:none;" tabindex="-1" autocomplete="off">
+            <input type="hidden" name="locale" value="en">
+            <input type="hidden" name="html_type" value="simple">
+            <button type="submit" class="btn btn-primary beta-submit">Get my beta access</button>
+        </form>
+        <div id="beta-success" class="beta-success" hidden>Thanks! Check your inbox to confirm your signup.</div>
+        <script>
+            (function () {
+                var form = document.getElementById('beta-form');
+                var success = document.getElementById('beta-success');
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    fetch(form.action, { method: 'POST', mode: 'no-cors', body: new FormData(form) }).finally(function () {
+                        form.hidden = true;
+                        success.hidden = false;
+                        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    });
+                });
+            })();
+        </script>
+
+        <p class="beta-perks">
+            <i class="ph-duotone ph-check-circle" style="font-size:14px; vertical-align:-2px;"></i> Early access &middot;
+            <i class="ph-duotone ph-check-circle" style="font-size:14px; vertical-align:-2px;"></i> Lifetime perks for early testers &middot;
+            <i class="ph-duotone ph-check-circle" style="font-size:14px; vertical-align:-2px;"></i> Direct line to the founder
+        </p>
+        <p class="beta-android">Android 8.0+ &mdash; Wear OS supported</p>
     </div>
 </section>
 
@@ -585,7 +585,7 @@
         </div>
         <div>
             <h4>Product</h4>
-            <ul><li><a href="#features">Features</a></li><li><a href="#who-snores">Who Snores?</a></li><li><a href="#faq">FAQ</a></li><li><a href="https://play.google.com/store/apps/details?id=com.goodapps.sleepwell" target="_blank" rel="noopener">Download</a></li></ul>
+            <ul><li><a href="#features">Features</a></li><li><a href="#who-snores">Who Snores?</a></li><li><a href="#faq">FAQ</a></li><li><a href="#beta-signup">Join Beta</a></li></ul>
         </div>
         <div>
             <h4>Resources</h4>
