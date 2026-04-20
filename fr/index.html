@@ -544,7 +544,14 @@
                 var success = document.getElementById('beta-success');
                 form.addEventListener('submit', function (e) {
                     e.preventDefault();
-                    fetch(form.action, { method: 'POST', mode: 'no-cors', body: new FormData(form) }).finally(function () {
+                    var data = new URLSearchParams();
+                    new FormData(form).forEach(function (v, k) { data.append(k, v); });
+                    fetch(form.action, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+                        body: data.toString()
+                    }).finally(function () {
                         form.hidden = true;
                         success.hidden = false;
                         success.scrollIntoView({ behavior: 'smooth', block: 'center' });
