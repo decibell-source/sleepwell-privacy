@@ -65,7 +65,8 @@ var i18n = {
     }
 };
 (function() {
-    var lang = (navigator.language || navigator.userLanguage || 'en').slice(0, 2).toLowerCase();
+    var qsLang = new URLSearchParams(window.location.search).get('lang');
+    var lang = (qsLang || navigator.language || navigator.userLanguage || 'en').slice(0, 2).toLowerCase();
     var t = i18n[lang] || i18n.en;
     document.documentElement.lang = t.lang;
     document.querySelectorAll('[data-i18n]').forEach(function(el) {
