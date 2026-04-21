@@ -2,7 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0A0E21">
     <title>Blog SleepWell — Ronflements, Apnée du Sommeil et Science du Sommeil</title>
     <meta name="description" content="Articles basés sur la science à propos des ronflements, de l'apnée du sommeil, de la qualité du sommeil et comment améliorer tes nuits. Par l'équipe SleepWell.">
     <meta property="og:title" content="Blog SleepWell — Ronflements, Apnée du Sommeil et Science du Sommeil">
@@ -10,6 +11,12 @@
     <meta property="og:type" content="website">
     <meta name="twitter:title" content="Blog SleepWell — Ronflements, Apnée du Sommeil et Science du Sommeil">
     <meta name="twitter:description" content="Articles basés sur la science à propos des ronflements, de l'apnée du sommeil, de la qualité du sommeil et comment améliorer tes nuits. Par l'équipe SleepWell.">
+    <link rel="icon" type="image/png" href="../../app_icon.png">
+    <link rel="apple-touch-icon" href="../../app_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
     <link rel="stylesheet" href="../../style.css">
     <meta property="og:image" content="https://joinsleepwell.com/og-image.png">
     <meta property="og:image:width" content="1200">
@@ -23,8 +30,42 @@
     <link rel="alternate" hreflang="de" href="https://joinsleepwell.com/de/blog/">
     <link rel="alternate" hreflang="it" href="https://joinsleepwell.com/it/blog/">
     <link rel="alternate" hreflang="x-default" href="https://joinsleepwell.com/blog/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Blog SleepWell",
+      "description": "Articles basés sur la science à propos des ronflements, de la qualité du sommeil et comment améliorer tes nuits.",
+      "url": "https://joinsleepwell.com/fr/blog/",
+      "inLanguage": "fr",
+      "publisher": {
+        "@type": "Organization",
+        "name": "SleepWell par GoodApps",
+        "url": "https://joinsleepwell.com/fr/"
+      },
+      "blogPost": [
+        {"@type": "BlogPosting", "headline": "Pourquoi je ronfle la nuit ? (Guide complet pour débutants)", "url": "https://joinsleepwell.com/fr/blog/why-do-i-snore-at-night.html"},
+        {"@type": "BlogPosting", "headline": "Ronfler, c'est normal ou c'est un problème de santé ?", "url": "https://joinsleepwell.com/fr/blog/is-snoring-normal.html"},
+        {"@type": "BlogPosting", "headline": "Comment savoir si tu ronfles pendant ton sommeil", "url": "https://joinsleepwell.com/fr/blog/how-to-know-if-you-snore.html"},
+        {"@type": "BlogPosting", "headline": "Quelles sont les causes des ronflements ? (Guide complet)", "url": "https://joinsleepwell.com/fr/blog/what-causes-snoring.html"},
+        {"@type": "BlogPosting", "headline": "Quel volume fait un ronflement ? C'est quoi la norme ?", "url": "https://joinsleepwell.com/fr/blog/how-loud-is-snoring.html"}
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://joinsleepwell.com/fr/"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://joinsleepwell.com/fr/blog/"}
+      ]
+    }
+    </script>
 </head>
 <body>
+
+<canvas id="sky-canvas"></canvas>
 
 <nav class="nav" id="main-nav">
     <div class="nav-inner">
@@ -42,66 +83,79 @@
     </div>
 </nav>
 
-<div style="padding: 120px 24px 40px; text-align:center;">
-    <span style="display:inline-block; font-size:0.8rem; text-transform:uppercase; letter-spacing:2px; color:var(--deep-primary); font-weight:600;">Blog</span>
-    <h1 style="font-size:clamp(2rem,5vw,3rem); font-weight:800; margin-top:12px; color:var(--deep-text);">Mieux dormir. Comprendre pourquoi.</h1>
-    <p style="color:rgba(255,255,255,0.8); max-width:560px; margin:16px auto 0; font-size:1.1rem;">Articles basés sur la science à propos des ronflements, de la qualité du sommeil et comment améliorer tes nuits.</p>
-</div>
+<div class="page-content">
 
-<section class="section" style="padding-top:20px;">
-    <div class="blog-grid">
-        <a href="why-do-i-snore-at-night.html" class="blog-card card">
-            <div class="blog-card-body">
-                <span class="blog-card-tag">Ronflements</span>
-                <h3>Pourquoi je ronfle la nuit ? (Guide complet pour débutants)</h3>
-                <p>Tu ronfles sans t'en rendre compte ? Comprends pourquoi les ronflements surviennent et ce qu'ils révèlent sur ton sommeil.</p>
-                <span class="read-more">Lire l'article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-            </div>
-        </a>
+<section class="phase-section phase-deep-night" data-phase="deep-night">
+    <div class="section" style="padding-top: 120px;">
+        <div class="section-header reveal">
+            <span class="label"><i class="ph-duotone ph-book-open" style="font-size:14px; vertical-align:-2px; margin-right:6px;"></i>Blog</span>
+            <h1 style="font-family:'DM Serif Display', serif; font-size:clamp(1.8rem, 4vw, 2.6rem); font-weight:400; margin-bottom:16px;">Mieux dormir. Comprendre pourquoi.</h1>
+            <p>Articles basés sur la science à propos des ronflements, de la qualité du sommeil et comment améliorer tes nuits.</p>
+        </div>
 
-        <a href="is-snoring-normal.html" class="blog-card card">
-            <div class="blog-card-body">
-                <span class="blog-card-tag">Santé</span>
-                <h3>Ronfler, c'est normal ou c'est un problème de santé ?</h3>
-                <p>Ronfler est fréquent, mais est-ce toujours sans danger ? Découvre quand t'inquiéter et la différence avec l'apnée du sommeil.</p>
-                <span class="read-more">Lire l'article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-            </div>
-        </a>
+        <div class="blog-grid">
+            <a href="why-do-i-snore-at-night.html" class="blog-card card reveal reveal-delay-1">
+                <div class="blog-card-body">
+                    <span class="blog-card-tag"><i class="ph-duotone ph-waveform" style="font-size:12px; vertical-align:-1px; margin-right:4px;"></i>Ronflements</span>
+                    <h3>Pourquoi je ronfle la nuit ? (Guide complet pour débutants)</h3>
+                    <p>Tu ronfles sans t'en rendre compte ? Comprends pourquoi les ronflements surviennent et ce qu'ils révèlent sur ton sommeil.</p>
+                    <span class="read-more">Lire l'article <i class="ph-bold ph-arrow-right" style="font-size:14px; vertical-align:-2px;"></i></span>
+                </div>
+            </a>
 
-        <a href="how-to-know-if-you-snore.html" class="blog-card card">
-            <div class="blog-card-body">
-                <span class="blog-card-tag">Détection</span>
-                <h3>Comment savoir si tu ronfles pendant ton sommeil</h3>
-                <p>La plupart des gens ignorent qu'ils ronflent. 3 méthodes pour en avoir le coeur net.</p>
-                <span class="read-more">Lire l'article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-            </div>
-        </a>
+            <a href="is-snoring-normal.html" class="blog-card card reveal reveal-delay-2">
+                <div class="blog-card-body">
+                    <span class="blog-card-tag"><i class="ph-duotone ph-heartbeat" style="font-size:12px; vertical-align:-1px; margin-right:4px;"></i>Santé</span>
+                    <h3>Ronfler, c'est normal ou c'est un problème de santé ?</h3>
+                    <p>Ronfler est fréquent, mais est-ce toujours sans danger ? Découvre quand t'inquiéter et la différence avec l'apnée du sommeil.</p>
+                    <span class="read-more">Lire l'article <i class="ph-bold ph-arrow-right" style="font-size:14px; vertical-align:-2px;"></i></span>
+                </div>
+            </a>
 
-        <a href="what-causes-snoring.html" class="blog-card card">
-            <div class="blog-card-body">
-                <span class="blog-card-tag">Causes</span>
-                <h3>Quelles sont les causes des ronflements ? (Guide complet)</h3>
-                <p>Les ronflements ont de multiples causes. Comprends tes facteurs déclencheurs et comment les suivre.</p>
-                <span class="read-more">Lire l'article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-            </div>
-        </a>
+            <a href="how-to-know-if-you-snore.html" class="blog-card card reveal reveal-delay-3">
+                <div class="blog-card-body">
+                    <span class="blog-card-tag"><i class="ph-duotone ph-magnifying-glass" style="font-size:12px; vertical-align:-1px; margin-right:4px;"></i>Détection</span>
+                    <h3>Comment savoir si tu ronfles pendant ton sommeil</h3>
+                    <p>La plupart des gens ignorent qu'ils ronflent. 3 méthodes pour en avoir le coeur net.</p>
+                    <span class="read-more">Lire l'article <i class="ph-bold ph-arrow-right" style="font-size:14px; vertical-align:-2px;"></i></span>
+                </div>
+            </a>
 
-        <a href="how-loud-is-snoring.html" class="blog-card card">
-            <div class="blog-card-body">
-                <span class="blog-card-tag">Analyse</span>
-                <h3>Quel volume fait un ronflement ? C'est quoi la norme ?</h3>
-                <p>De à peine perceptible à extrêmement bruyant. Découvre les niveaux d'intensité des ronflements et pourquoi ça compte.</p>
-                <span class="read-more">Lire l'article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-            </div>
-        </a>
+            <a href="what-causes-snoring.html" class="blog-card card reveal reveal-delay-1">
+                <div class="blog-card-body">
+                    <span class="blog-card-tag"><i class="ph-duotone ph-question" style="font-size:12px; vertical-align:-1px; margin-right:4px;"></i>Causes</span>
+                    <h3>Quelles sont les causes des ronflements ? (Guide complet)</h3>
+                    <p>Les ronflements ont de multiples causes. Comprends tes facteurs déclencheurs et comment les suivre.</p>
+                    <span class="read-more">Lire l'article <i class="ph-bold ph-arrow-right" style="font-size:14px; vertical-align:-2px;"></i></span>
+                </div>
+            </a>
+
+            <a href="how-loud-is-snoring.html" class="blog-card card reveal reveal-delay-2">
+                <div class="blog-card-body">
+                    <span class="blog-card-tag"><i class="ph-duotone ph-chart-bar" style="font-size:12px; vertical-align:-1px; margin-right:4px;"></i>Analyse</span>
+                    <h3>Quel volume fait un ronflement ? C'est quoi la norme ?</h3>
+                    <p>De à peine perceptible à extrêmement bruyant. Découvre les niveaux d'intensité des ronflements et pourquoi ça compte.</p>
+                    <span class="read-more">Lire l'article <i class="ph-bold ph-arrow-right" style="font-size:14px; vertical-align:-2px;"></i></span>
+                </div>
+            </a>
+        </div>
+
+        <div class="beta-signup reveal" style="margin-top: 80px;">
+            <span class="beta-eyebrow">Beta limitée &mdash; 100 places</span>
+            <h2>Prêt à suivre ton sommeil ?</h2>
+            <p class="beta-tagline">La beta ouvre bientôt au Canada. Inscris-toi pour avoir un accès anticipé et des avantages à vie réservés aux premiers testeurs.</p>
+            <a href="../index.html#beta-signup" class="btn btn-primary beta-submit" style="display:inline-flex; align-items:center; gap:8px; max-width:320px;">
+                <i class="ph-duotone ph-paper-plane-tilt" style="font-size:18px;"></i> Rejoindre la beta
+            </a>
+            <p class="beta-perks">
+                <i class="ph-duotone ph-check-circle" style="font-size:14px; vertical-align:-2px;"></i> Accès anticipé &middot;
+                <i class="ph-duotone ph-check-circle" style="font-size:14px; vertical-align:-2px;"></i> Avantages à vie pour les premiers testeurs &middot;
+                <i class="ph-duotone ph-check-circle" style="font-size:14px; vertical-align:-2px;"></i> Ligne directe avec le fondateur
+            </p>
+            <p class="beta-android">Android 8.0+ &mdash; Compatible Wear OS</p>
+        </div>
     </div>
 </section>
-
-<div class="highlight-section" style="background:linear-gradient(135deg, rgba(123,104,238,0.05), rgba(177,156,217,0.08)); margin:40px auto; max-width:1200px;">
-    <h2>Prêt à suivre ton sommeil ?</h2>
-    <p style="color:rgba(255,255,255,0.8);">Gratuit sur Google Play. Aucun compte requis.</p>
-    <a href="../#beta-signup" class="btn btn-primary" style="margin-top:24px;">Télécharger SleepWell</a>
-</div>
 
 <footer class="footer">
     <div class="footer-grid">
@@ -111,11 +165,11 @@
         </div>
         <div>
             <h4>Produit</h4>
-            <ul><li><a href="../#features">Fonctionnalités</a></li><li><a href="../#beta-signup">Télécharger</a></li></ul>
+            <ul><li><a href="../index.html#features">Fonctionnalités</a></li><li><a href="../index.html#beta-signup">Télécharger</a></li></ul>
         </div>
         <div>
             <h4>Ressources</h4>
-            <ul><li><a href="index.html">Blog</a></li><li><a href="../#quiz">Quiz ronflement</a></li><li><a href="../apnea-test.html">Test apnée du sommeil</a></li><li><a href="../privacy.html">Confidentialité</a></li></ul>
+            <ul><li><a href="index.html">Blog</a></li><li><a href="../index.html#quiz">Quiz ronflement</a></li><li><a href="../apnea-test.html">Test apnée du sommeil</a></li><li><a href="../privacy.html">Confidentialité</a></li></ul>
         </div>
     </div>
     <div class="footer-bottom">
@@ -124,12 +178,59 @@
     </div>
 </footer>
 
-<style>
-.nav-links.show {
-    display: flex; flex-direction: column; position: absolute;
-    top: 64px; left: 0; right: 0; background: rgba(10,14,33,0.98);
-    padding: 20px 24px; gap: 16px; border-bottom: 1px solid rgba(129,140,248,0.1);
-}
-</style>
+</div><!-- /page-content -->
+
+<script>
+// Celestial sky canvas (simplified, static night for blog index)
+(function() {
+    var canvas = document.getElementById('sky-canvas');
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    var W, H;
+    function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; paint(); }
+    function paint() {
+        var grad = ctx.createLinearGradient(0, 0, 0, H);
+        grad.addColorStop(0, '#0A0E21');
+        grad.addColorStop(0.5, '#1B2838');
+        grad.addColorStop(1, '#0A0E21');
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, W, H);
+        for (var i = 0; i < 90; i++) {
+            var x = (i * 137.5) % W;
+            var y = ((i * 71.7) % (H * 0.75));
+            var r = ((i * 13) % 25) / 10 + 0.4;
+            var a = ((i * 17) % 50) / 100 + 0.3;
+            ctx.fillStyle = 'rgba(245, 245, 220, ' + a + ')';
+            ctx.beginPath();
+            ctx.arc(x, y, r, 0, Math.PI * 2);
+            ctx.fill();
+            if (r > 1.8) {
+                ctx.fillStyle = 'rgba(245, 245, 220, ' + (a * 0.18) + ')';
+                ctx.beginPath();
+                ctx.arc(x, y, r * 2.5, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+        ctx.fillStyle = 'rgba(245, 245, 220, 0.85)';
+        ctx.beginPath();
+        ctx.arc(W * 0.82, H * 0.18, 34, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.fillStyle = 'rgba(245, 245, 220, 0.10)';
+        ctx.beginPath();
+        ctx.arc(W * 0.82, H * 0.18, 56, 0, Math.PI * 2);
+        ctx.fill();
+    }
+    resize();
+    window.addEventListener('resize', resize, { passive: true });
+})();
+
+// Reveal-on-scroll observer
+(function() {
+    var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function(el) { obs.observe(el); });
+})();
+</script>
 </body>
 </html>
